@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quiz Diagnóstico · 3º Ano do Ensino Médio</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1b2033;--mu:#5f6782;--pr:#2f5bea;--prt:#fff;--ok:#16874a;--okb:#e3f5ea;--er:#c0392b;--erb:#fbe7e4;--bd:#dde1ee;--wa:#b86e00;--wab:#fff1da;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141d;--card:#1c2030;--tx:#eceffa;--mu:#a2a9c4;--pr:#6c8cff;--prt:#0c1020;--ok:#5fd394;--okb:#17301f;--er:#ff8a7a;--erb:#3a1d1a;--bd:#2f3550;--wa:#ffc266;--wab:#3a2c10}}
+:root[data-theme="dark"]{--bg:#12141d;--card:#1c2030;--tx:#eceffa;--mu:#a2a9c4;--pr:#6c8cff;--prt:#0c1020;--ok:#5fd394;--okb:#17301f;--er:#ff8a7a;--erb:#3a1d1a;--bd:#2f3550;--wa:#ffc266;--wab:#3a2c10}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:680px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.45rem;margin:0 0 4px}h2{font-size:1.15rem;margin:0 0 12px}
+.mu{color:var(--mu);font-size:.92rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px;margin:14px 0}
+label{display:block;font-weight:600;margin:12px 0 4px;font-size:.92rem}
+input,select{width:100%;padding:11px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.sub{border:2px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:12px;padding:14px 8px;font:inherit;cursor:pointer;text-align:center}
+.sub .e{font-size:1.7rem;display:block}.sub.on{border-color:var(--pr);background:var(--card);font-weight:700}
+.btn{background:var(--pr);color:var(--prt);border:0;border-radius:10px;padding:12px 20px;font:inherit;font-weight:700;cursor:pointer;margin-top:14px}
+.btn:disabled{opacity:.4;cursor:not-allowed}.btn.sec{background:transparent;color:var(--pr);border:1px solid var(--pr)}
+.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden;margin:8px 0 16px}.bar i{display:block;height:100%;background:var(--pr)}
+.opt{display:block;width:100%;text-align:left;border:2px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:10px;padding:12px;margin:8px 0;font:inherit;cursor:pointer}
+.opt.sel{border-color:var(--pr);background:var(--card);font-weight:600}
+.tag{display:inline-block;font-size:.78rem;background:var(--bg);border:1px solid var(--bd);border-radius:20px;padding:2px 10px;color:var(--mu)}
+.score{font-size:2.6rem;font-weight:800;line-height:1}
+.lvl{border-radius:12px;padding:12px 14px;margin:12px 0;font-weight:600}
+.l-ok{background:var(--okb);color:var(--ok)}.l-wa{background:var(--wab);color:var(--wa)}.l-er{background:var(--erb);color:var(--er)}
+.rev{border-left:4px solid var(--bd);padding:4px 0 4px 12px;margin:14px 0}.rev.c{border-color:var(--ok)}.rev.w{border-color:var(--er)}
+.tp{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid var(--bd)}
+</style>
+</head>
+<body>
+<main>
+  <div id="app"></div>
+</main>
+<script>
+const Q={
+mat:{n:"Matemática",e:"📐",q:[
+["Funções","Se f(x) = 2x + 3, qual é o valor de f(4)?",["8","11","14","9"],1,"Substituindo x por 4: 2·4 + 3 = 11."],
+["Geometria","Qual é a área de um círculo de raio 5 cm? (use π = 3)",["15 cm²","30 cm²","75 cm²","150 cm²"],2,"A = π·r² = 3·25 = 75 cm²."],
+["Probabilidade","Ao lançar um dado comum, qual a probabilidade de sair um número primo?",["1/6","1/3","1/2","2/3"],2,"Primos no dado: 2, 3 e 5, ou seja 3 de 6 casos = 1/2."],
+["Estatística","Qual é a média de 4, 6, 8, 10 e 12?",["7","8","9","10"],1,"Soma = 40; 40 ÷ 5 = 8."],
+["Porcentagem","Um produto de R$ 200 recebe desconto de 15%. Qual o preço final?",["R$ 170","R$ 185","R$ 150","R$ 30"],0,"15% de 200 = 30; 200 − 30 = 170."],
+["Análise combinatória","De quantas formas 3 alunos podem se sentar em fila?",["3","6","9","12"],1,"Permutação: 3! = 3·2·1 = 6."],
+["Geometria espacial","Qual o volume de um cubo de aresta 3 cm?",["9 cm³","18 cm³","27 cm³","81 cm³"],2,"V = a³ = 27 cm³."],
+["Equação do 2º grau","Quais as raízes de x² − 5x + 6 = 0?",["1 e 6","2 e 3","−2 e −3","−1 e 6"],1,"Soma 5 e produto 6: as raízes são 2 e 3."]]},
+por:{n:"Português",e:"📖",q:[
+["Figuras de linguagem","“Seus olhos são duas estrelas.” Essa frase apresenta qual figura de linguagem?",["Metonímia","Ironia","Metáfora","Hipérbole"],2,"Há comparação implícita, sem “como”: isso é metáfora."],
+["Gramática","Qual frase está de acordo com a norma-padrão?",["Fazem dois anos que moro aqui.","Faz dois anos que moro aqui.","Houveram muitos problemas.","Haviam dois alunos faltando."],1,"Verbos “fazer” e “haver” indicando tempo ou existência são impessoais: ficam no singular."],
+["Crase","Complete: “Fui ___ escola ontem.”",["a","à","as","há"],1,"“Ir a” + “a escola” (artigo) = à escola."],
+["Tipologia textual","Um texto que defende um ponto de vista com argumentos e propõe uma solução (como na redação do ENEM) é:",["Narrativo","Injuntivo","Descritivo","Dissertativo-argumentativo"],3,"A estrutura tese + argumentos + proposta de intervenção é dissertativo-argumentativa."],
+["Interpretação","No trecho “Choveu tanto que a rua virou rio”, a relação entre as orações é de:",["Causa","Consequência","Oposição","Finalidade"],1,"“Tanto que” introduz o resultado do que foi dito: consequência."],
+["Variação linguística","Usar “tu vai” em vez de “tu vais” em uma conversa informal exemplifica:",["Erro que impede a comunicação","Variação linguística","Texto técnico","Arcaísmo"],1,"É variação de registro e região; o contexto define a adequação."],
+["Funções da linguagem","Um anúncio que tenta convencer o leitor a comprar um produto predomina a função:",["Poética","Referencial","Conativa","Metalinguística"],2,"A função conativa (apelativa) busca persuadir o receptor."],
+["Pontuação","Qual frase usa corretamente a vírgula?",["Maria, foi ao mercado.","Os alunos, estudaram muito.","Ontem, fui à escola.","Pedro e, Ana saíram."],2,"Adjunto adverbial no início pode ser seguido de vírgula; não se separa sujeito e verbo."]]},
+fis:{n:"Física",e:"⚡",q:[
+["Cinemática","Converta 72 km/h para m/s.",["10 m/s","20 m/s","72 m/s","259 m/s"],1,"Divida por 3,6: 72 ÷ 3,6 = 20 m/s."],
+["Dinâmica","Um corpo de 5 kg recebe aceleração de 3 m/s². Qual a força resultante?",["8 N","1,7 N","15 N","30 N"],2,"Segunda lei de Newton: F = m·a = 5·3 = 15 N."],
+["Eletricidade","Um resistor de 4 Ω está ligado a 12 V. Qual a corrente?",["3 A","8 A","16 A","48 A"],0,"Lei de Ohm: i = U/R = 12/4 = 3 A."],
+["Ondulatória","Uma onda tem λ = 2 m e frequência de 5 Hz. Qual sua velocidade?",["2,5 m/s","7 m/s","10 m/s","0,4 m/s"],2,"v = λ·f = 2·5 = 10 m/s."],
+["Termologia","A água ferve a 100 °C. Quanto vale essa temperatura em kelvin?",["273 K","373 K","100 K","473 K"],1,"K = °C + 273 = 373 K."],
+["Acústica","O eco está ligado a qual fenômeno ondulatório?",["Refração","Difração","Reflexão","Polarização"],2,"O som reflete em um obstáculo e retorna ao ouvinte."],
+["Energia","Qual a energia cinética de um corpo de 2 kg a 3 m/s?",["6 J","9 J","12 J","18 J"],1,"Ec = m·v²/2 = 2·9/2 = 9 J."],
+["Potência elétrica","Qual a potência de um chuveiro de 220 V que consome 10 A?",["22 W","230 W","2.200 W","4.400 W"],2,"P = U·i = 220·10 = 2.200 W."]]},
+qui:{n:"Química",e:"🧪",q:[
+["Ácidos e bases","Uma solução com pH 3 é:",["Básica","Neutra","Ácida","Salina apenas"],2,"pH menor que 7 indica meio ácido."],
+["Mol e massa","Qual a massa molar da água (H₂O)? (H = 1; O = 16)",["16 g/mol","17 g/mol","18 g/mol","34 g/mol"],2,"2·1 + 16 = 18 g/mol."],
+["Ligações químicas","Qual par forma tipicamente uma ligação iônica?",["H e O","Na e Cl","C e H","N e N"],1,"Metal (Na) + ametal (Cl) transferem elétrons: ligação iônica."],
+["Química orgânica","O grupo funcional característico dos álcoois é:",["–COOH","–CHO","–OH ligado a carbono saturado","–NH₂"],2,"Álcoois têm hidroxila (–OH) ligada a carbono saturado."],
+["Estequiometria","Em 2 H₂ + O₂ → 2 H₂O, quantos mols de H₂O se formam com 2 mols de O₂?",["2","3","4","8"],2,"A proporção é 1 O₂ : 2 H₂O, então 2 mols de O₂ formam 4 mols de H₂O."],
+["Soluções","Uma solução tem 10 g de soluto em 0,5 L. Qual a concentração?",["5 g/L","10 g/L","20 g/L","0,05 g/L"],2,"C = m/V = 10/0,5 = 20 g/L."],
+["Tabela periódica","Os elementos do grupo 18 são chamados de:",["Halogênios","Metais alcalinos","Gases nobres","Calcogênios"],2,"Grupo 18 (He, Ne, Ar…): gases nobres."],
+["Termoquímica","Uma reação que libera calor para o ambiente é:",["Endotérmica","Exotérmica","Isotérmica","Neutra"],1,"Exotérmica: ΔH negativo."]]},
+bio:{n:"Biologia",e:"🧬",q:[
+["Genética","No cruzamento Aa × Aa, qual a proporção fenotípica esperada (A dominante)?",["1:1","3:1","1:2:1","4:0"],1,"AA, Aa, Aa mostram o dominante e aa o recessivo: 3:1."],
+["Ecologia","Em uma cadeia alimentar, os organismos que produzem a própria energia são os:",["Consumidores","Decompositores","Produtores","Parasitas"],2,"Produtores fazem fotossíntese ou quimiossíntese."],
+["Evolução","A teoria da seleção natural foi proposta por:",["Mendel","Darwin","Lamarck","Pasteur"],1,"Charles Darwin (junto com Wallace) propôs a seleção natural."],
+["Citologia","Qual organela é responsável pela respiração celular?",["Ribossomo","Lisossomo","Mitocôndria","Complexo golgiense"],2,"A mitocôndria produz ATP na respiração celular."],
+["Fisiologia","Qual sistema defende o organismo contra agentes infecciosos?",["Digestório","Imunológico","Excretor","Endócrino"],1,"O sistema imunológico produz células e anticorpos de defesa."],
+["Impactos ambientais","O aumento do efeito estufa está mais associado ao acúmulo de:",["Oxigênio","Nitrogênio","Gás carbônico","Hélio"],2,"CO₂ e metano retêm calor na atmosfera."],
+["Saúde pública","A dengue é transmitida pelo mosquito:",["Anopheles","Aedes aegypti","Culex","Barbeiro"],1,"O Aedes aegypti também transmite zika e chikungunya."],
+["Fotossíntese","Qual gás é liberado na fotossíntese?",["Gás carbônico","Metano","Oxigênio","Nitrogênio"],2,"CO₂ + H₂O + luz → glicose + O₂."]]},
+his:{n:"História",e:"🏛️",q:[
+["Era Vargas","A CLT (Consolidação das Leis do Trabalho) foi criada em:",["1930","1943","1964","1988"],1,"Decreto-Lei de 1943, no Estado Novo de Vargas."],
+["Ditadura militar","O golpe que iniciou a ditadura militar brasileira ocorreu em:",["1954","1961","1964","1985"],2,"Março/abril de 1964."],
+["Guerra Fria","A Guerra Fria foi a disputa de influência entre:",["França e Alemanha","EUA e URSS","China e Japão","Inglaterra e Rússia"],1,"Duas superpotências, capitalista e socialista, sem confronto direto."],
+["República Velha","A “política do café com leite” alternava no poder oligarquias de:",["Bahia e Pernambuco","RS e SC","SP e MG","Piauí e Ceará"],2,"Elites paulistas (café) e mineiras (leite)."],
+["Revolução Industrial","A Revolução Industrial começou no século XVIII em qual país?",["França","Inglaterra","Alemanha","EUA"],1,"Na Inglaterra, com a máquina a vapor e a indústria têxtil."],
+["Segunda Guerra","O Holocausto foi o genocídio promovido por qual regime?",["Fascista italiano","Stalinista","Nazista","Franquista"],2,"O regime nazista perseguiu e assassinou milhões de judeus e outros grupos."],
+["Redemocratização","A Constituição Cidadã do Brasil foi promulgada em:",["1964","1979","1988","1994"],2,"Em 5 de outubro de 1988."],
+["Brasil Colônia","A principal mão de obra da economia açucareira colonial foi:",["Assalariada","Escravizada","Imigrante europeia","Servil feudal"],1,"A economia colonial se baseou no trabalho de africanos escravizados."]]},
+geo:{n:"Geografia",e:"🌎",q:[
+["Biomas","Qual bioma predomina no semiárido nordestino?",["Cerrado","Caatinga","Mata Atlântica","Pampa"],1,"A Caatinga é exclusivamente brasileira e típica do semiárido."],
+["Globalização","A globalização se caracteriza principalmente por:",["Isolamento entre países","Maior integração econômica, cultural e tecnológica","Fim das fronteiras políticas","Queda do comércio"],1,"Redes de comunicação e transporte ampliaram a integração mundial."],
+["Urbanização","O principal fator da urbanização acelerada no Brasil no século XX foi:",["Êxodo rural","Reforma agrária","Imigração europeia","Queda da natalidade"],0,"Migração do campo para a cidade, atraída por indústria e serviços."],
+["Energia","Qual é uma fonte de energia renovável?",["Carvão mineral","Petróleo","Gás natural","Eólica"],3,"Vento é recurso renovável; o Nordeste tem grande destaque em eólica."],
+["Demografia","Uma pirâmide etária com base estreita e topo largo indica população:",["Jovem","Envelhecida","Em explosão demográfica","Sem idosos"],1,"Baixa natalidade e maior expectativa de vida levam ao envelhecimento."],
+["Clima","O fenômeno El Niño é caracterizado por:",["Resfriamento do Atlântico","Aquecimento anormal do Pacífico","Falta de vento","Aumento de geleiras"],1,"É o aquecimento das águas do Pacífico equatorial, que altera chuvas e secas."],
+["Geopolítica","A ONU foi criada em 1945 com o objetivo principal de:",["Dividir territórios","Manter a paz e a cooperação","Controlar o petróleo","Unificar moedas"],1,"Surgiu após a Segunda Guerra para promover paz e cooperação."],
+["Agropecuária","O cultivo de um só produto em grande área, voltado à exportação, é chamado de:",["Policultura","Monocultura","Agricultura de subsistência","Permacultura"],1,"Monocultura: típica do agronegócio exportador."]]}
+};
+const $=s=>document.querySelector(s), app=$("#app");
+const esc=t=>String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let S={step:"info",nome:"",escola:"",turma:"",subj:"",i:0,ans:[],rec:null};
+
+function go(st){S.step=st;render()}
+function render(){({info:vInfo,quiz:vQuiz,res:vRes})[S.step]();window.scrollTo(0,0)}
+
+function vInfo(){
+  app.innerHTML=`<h1>Quiz Diagnóstico · 3º Ano</h1>
+  <p class="mu">Ensino Médio · Rede Estadual do Piauí. Escolha a matéria em que você sente mais dificuldade e responda 8 questões. No final você recebe seu feedback imediato!</p>
+  <div class="card">
+    <label for="n">Nome completo</label><input id="n" value="${esc(S.nome)}" autocomplete="name">
+    <label for="e">Escola</label><input id="e" value="${esc(S.escola)}">
+    <label for="t">Turma</label><input id="t" value="${esc(S.turma)}" placeholder="Ex.: 3º A">
+    <label>Em qual matéria você tem mais dificuldade?</label>
+    <div class="grid">${Object.entries(Q).map(([k,v])=>`<button class="sub ${S.subj===k?"on":""}" data-k="${k}"><span class="e">${v.e}</span>${v.n}</button>`).join("")}</div>
+    <button class="btn" id="go">Começar o quiz</button>
+  </div>`;
+  const chk=()=>{S.nome=$("#n").value.trim();S.escola=$("#e").value.trim();S.turma=$("#t").value.trim();$("#go").disabled=!(S.nome&&S.escola&&S.turma&&S.subj)};
+  app.querySelectorAll("input").forEach(i=>i.oninput=chk);
+  app.querySelectorAll(".sub").forEach(b=>b.onclick=()=>{S.subj=b.dataset.k;app.querySelectorAll(".sub").forEach(x=>x.classList.toggle("on",x===b));chk()});
+  $("#go").onclick=()=>{S.i=0;S.ans=[];go("quiz")};chk();
+}
+
+function vQuiz(){
+  const m=Q[S.subj],q=m.q[S.i],n=m.q.length,sel=S.ans[S.i];
+  app.innerHTML=`<div class="mu">${m.e} ${m.n} · Questão ${S.i+1} de ${n}</div>
+  <div class="bar"><i style="width:${(S.i/n)*100}%"></i></div>
+  <div class="card"><span class="tag">${q[0]}</span><h2 style="margin-top:10px">${esc(q[1])}</h2>
+  ${q[2].map((o,j)=>`<button class="opt ${sel===j?"sel":""}" data-j="${j}">${"ABCD"[j]}) ${esc(o)}</button>`).join("")}
+  <button class="btn" id="nx" ${sel==null?"disabled":""}>${S.i===n-1?"Finalizar":"Próxima"}</button></div>`;
+  app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{S.ans[S.i]=+b.dataset.j;vQuiz()});
+  $("#nx").onclick=()=>{S.i<n-1?(S.i++,vQuiz()):finish()};
+}
+
+function finish(){
+  const m=Q[S.subj],tp={};let ac=0;
+  m.q.forEach((q,i)=>{const ok=S.ans[i]===q[3];ac+=ok;tp[q[0]]=ok?1:0});
+  const pct=Math.round(ac/m.q.length*100);
+  const nivel=pct>=75?"Bom domínio":pct>=50?"Em desenvolvimento":"Precisa de reforço";
+  S.rec={nome:S.nome,escola:S.escola,turma:S.turma,materia:m.n,acertos:ac,total:m.q.length,pct,nivel,topicos:tp,respostas:S.ans};
+  go("res");
+}
+
+function vRes(){
+  const m=Q[S.subj],r=S.rec,cls=r.pct>=75?"l-ok":r.pct>=50?"l-wa":"l-er";
+  const msg=r.pct>=75?"Parabéns! Você já domina boa parte desta matéria. Continue praticando com questões do ENEM e do SAEPI para consolidar.":r.pct>=50?"Você está no caminho certo, mas ainda há pontos para fortalecer. Reveja os tópicos marcados abaixo e resolva exercícios sobre eles.":"Sem problema: este quiz serve justamente para mostrar por onde começar. Faça uma revisão dos tópicos abaixo, peça ajuda ao professor e estude um pouco por dia.";
+  app.innerHTML=`<h1>Seu feedback, ${esc(r.nome.split(" ")[0])}</h1>
+  <div class="card"><div class="mu">${m.e} ${m.n}</div><div class="score">${r.acertos}/${r.total}</div>
+  <div class="lvl ${cls}">${r.nivel} · ${r.pct}%</div><p>${msg}</p></div>
+  <div class="card"><h2>Por tópico</h2>${Object.entries(r.topicos).map(([t,v])=>`<div class="tp"><span>${t}</span><b style="color:var(--${v?"ok":"er"})">${v?"Acertou":"Revisar"}</b></div>`).join("")}</div>
+  <div class="card"><h2>Revisão das questões</h2>${m.q.map((q,i)=>{const ok=S.ans[i]===q[3];return `<div class="rev ${ok?"c":"w"}"><b>${i+1}. ${esc(q[1])}</b><br>Sua resposta: ${esc(q[2][S.ans[i]])} ${ok?"✔":"✘"}<br>${ok?"":`Correta: <b>${esc(q[2][q[3]])}</b><br>`}<span class="mu">${esc(q[4])}</span></div>`}).join("")}</div>
+  <button class="btn sec" id="again">Fazer outro quiz</button>`;
+  $("#again").onclick=()=>{S.subj="";S.rec=null;go("info")};
+}
+
+render();
+</script>
+</body>
+</html>
