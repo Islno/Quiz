@@ -1,165 +1,2159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Quiz Diagnóstico · 3º Ano do Ensino Médio</title>
-<style>
-:root{--bg:#f6f7fb;--card:#fff;--tx:#1b2033;--mu:#5f6782;--pr:#2f5bea;--prt:#fff;--ok:#16874a;--okb:#e3f5ea;--er:#c0392b;--erb:#fbe7e4;--bd:#dde1ee;--wa:#b86e00;--wab:#fff1da;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141d;--card:#1c2030;--tx:#eceffa;--mu:#a2a9c4;--pr:#6c8cff;--prt:#0c1020;--ok:#5fd394;--okb:#17301f;--er:#ff8a7a;--erb:#3a1d1a;--bd:#2f3550;--wa:#ffc266;--wab:#3a2c10}}
-:root[data-theme="dark"]{--bg:#12141d;--card:#1c2030;--tx:#eceffa;--mu:#a2a9c4;--pr:#6c8cff;--prt:#0c1020;--ok:#5fd394;--okb:#17301f;--er:#ff8a7a;--erb:#3a1d1a;--bd:#2f3550;--wa:#ffc266;--wab:#3a2c10}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-main{max-width:680px;margin:0 auto;padding:20px 16px 40px}
-h1{font-size:1.45rem;margin:0 0 4px}h2{font-size:1.15rem;margin:0 0 12px}
-.mu{color:var(--mu);font-size:.92rem}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px;margin:14px 0}
-label{display:block;font-weight:600;margin:12px 0 4px;font-size:.92rem}
-input,select{width:100%;padding:11px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
-.sub{border:2px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:12px;padding:14px 8px;font:inherit;cursor:pointer;text-align:center}
-.sub .e{font-size:1.7rem;display:block}.sub.on{border-color:var(--pr);background:var(--card);font-weight:700}
-.btn{background:var(--pr);color:var(--prt);border:0;border-radius:10px;padding:12px 20px;font:inherit;font-weight:700;cursor:pointer;margin-top:14px}
-.btn:disabled{opacity:.4;cursor:not-allowed}.btn.sec{background:transparent;color:var(--pr);border:1px solid var(--pr)}
-.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden;margin:8px 0 16px}.bar i{display:block;height:100%;background:var(--pr)}
-.opt{display:block;width:100%;text-align:left;border:2px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:10px;padding:12px;margin:8px 0;font:inherit;cursor:pointer}
-.opt.sel{border-color:var(--pr);background:var(--card);font-weight:600}
-.tag{display:inline-block;font-size:.78rem;background:var(--bg);border:1px solid var(--bd);border-radius:20px;padding:2px 10px;color:var(--mu)}
-.score{font-size:2.6rem;font-weight:800;line-height:1}
-.lvl{border-radius:12px;padding:12px 14px;margin:12px 0;font-weight:600}
-.l-ok{background:var(--okb);color:var(--ok)}.l-wa{background:var(--wab);color:var(--wa)}.l-er{background:var(--erb);color:var(--er)}
-.rev{border-left:4px solid var(--bd);padding:4px 0 4px 12px;margin:14px 0}.rev.c{border-color:var(--ok)}.rev.w{border-color:var(--er)}
-.tp{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid var(--bd)}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caderno.enem — Simulado Comentado & Resolução 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        paper: {
+                            bg: '#F7F4ED',
+                            card: '#FFFFFF',
+                            subtle: '#EFECE4',
+                            border: '#DFD9CE',
+                            borderDark: '#C8C0B3',
+                            ink: '#161615',
+                            muted: '#5C5852',
+                            terracotta: '#C84B31',
+                            cobalt: '#1D4ED8',
+                            forest: '#15803D',
+                            amber: '#B45309'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --bg-main: #F7F4ED;
+            --bg-surface: #FFFFFF;
+            --bg-subtle: #EFECE4;
+            --border-hairline: #DFD9CE;
+            --border-strong: #161615;
+            --text-ink: #161615;
+            --text-muted: #5C5852;
+            --shadow-tactile: 2px 2px 0px #161615;
+            --shadow-card: 0 1px 2px rgba(22, 22, 21, 0.06);
+        }
+
+        html.dark {
+            --bg-main: #121211;
+            --bg-surface: #1A1A18;
+            --bg-subtle: #242421;
+            --border-hairline: #2E2E2A;
+            --border-strong: #E5E0D8;
+            --text-ink: #F3F0E6;
+            --text-muted: #A09C94;
+            --shadow-tactile: 2px 2px 0px #000000;
+            --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-ink);
+            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Subtle paper grain & editorial borders */
+        .editorial-card {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-hairline);
+            box-shadow: var(--shadow-card);
+        }
+
+        .tactile-btn {
+            border: 1px solid var(--border-strong);
+            box-shadow: var(--shadow-tactile);
+            transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+        }
+        .tactile-btn:active:not(:disabled) {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px var(--border-strong);
+        }
+
+        /* Highlighter effect for base text sentences */
+        .hl-sentence {
+            transition: background-color 0.15s ease;
+            border-radius: 2px;
+            padding: 0 1px;
+        }
+        .hl-mode-active .hl-sentence:hover {
+            background-color: rgba(250, 204, 21, 0.35);
+            cursor: pointer;
+        }
+        .hl-sentence.highlighted {
+            background-color: #FEF08A;
+            color: #161615;
+            box-shadow: 0 1px 0 #EAB308;
+        }
+        html.dark .hl-sentence.highlighted {
+            background-color: rgba(234, 179, 8, 0.35);
+            color: #FEF9C3;
+            box-shadow: 0 1px 0 rgba(234, 179, 8, 0.6);
+        }
+
+        /* Teacher's Margin Note Box ("Como Resolver") */
+        .blueprint-note {
+            background-color: #FFFDF7;
+            border: 1px solid #E6DEC8;
+            border-left: 3px solid #D97706;
+        }
+        html.dark .blueprint-note {
+            background-color: #1F1D18;
+            border: 1px solid #383327;
+            border-left: 3px solid #F59E0B;
+        }
+
+        /* Option Strikethrough (Riscar alternativa) */
+        .option-striked .option-text-content {
+            text-decoration: line-through;
+            opacity: 0.42;
+        }
+
+        /* Custom subtle scrollbars */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(120, 113, 108, 0.35); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(120, 113, 108, 0.6); }
+    </style>
 </head>
-<body>
-<main>
-  <div id="app"></div>
-</main>
-<script>
-const Q={
-mat:{n:"Matemática",e:"📐",q:[
-["Funções","Se f(x) = 2x + 3, qual é o valor de f(4)?",["8","11","14","9"],1,"Substituindo x por 4: 2·4 + 3 = 11."],
-["Geometria","Qual é a área de um círculo de raio 5 cm? (use π = 3)",["15 cm²","30 cm²","75 cm²","150 cm²"],2,"A = π·r² = 3·25 = 75 cm²."],
-["Probabilidade","Ao lançar um dado comum, qual a probabilidade de sair um número primo?",["1/6","1/3","1/2","2/3"],2,"Primos no dado: 2, 3 e 5, ou seja 3 de 6 casos = 1/2."],
-["Estatística","Qual é a média de 4, 6, 8, 10 e 12?",["7","8","9","10"],1,"Soma = 40; 40 ÷ 5 = 8."],
-["Porcentagem","Um produto de R$ 200 recebe desconto de 15%. Qual o preço final?",["R$ 170","R$ 185","R$ 150","R$ 30"],0,"15% de 200 = 30; 200 − 30 = 170."],
-["Análise combinatória","De quantas formas 3 alunos podem se sentar em fila?",["3","6","9","12"],1,"Permutação: 3! = 3·2·1 = 6."],
-["Geometria espacial","Qual o volume de um cubo de aresta 3 cm?",["9 cm³","18 cm³","27 cm³","81 cm³"],2,"V = a³ = 27 cm³."],
-["Equação do 2º grau","Quais as raízes de x² − 5x + 6 = 0?",["1 e 6","2 e 3","−2 e −3","−1 e 6"],1,"Soma 5 e produto 6: as raízes são 2 e 3."]]},
-por:{n:"Português",e:"📖",q:[
-["Figuras de linguagem","“Seus olhos são duas estrelas.” Essa frase apresenta qual figura de linguagem?",["Metonímia","Ironia","Metáfora","Hipérbole"],2,"Há comparação implícita, sem “como”: isso é metáfora."],
-["Gramática","Qual frase está de acordo com a norma-padrão?",["Fazem dois anos que moro aqui.","Faz dois anos que moro aqui.","Houveram muitos problemas.","Haviam dois alunos faltando."],1,"Verbos “fazer” e “haver” indicando tempo ou existência são impessoais: ficam no singular."],
-["Crase","Complete: “Fui ___ escola ontem.”",["a","à","as","há"],1,"“Ir a” + “a escola” (artigo) = à escola."],
-["Tipologia textual","Um texto que defende um ponto de vista com argumentos e propõe uma solução (como na redação do ENEM) é:",["Narrativo","Injuntivo","Descritivo","Dissertativo-argumentativo"],3,"A estrutura tese + argumentos + proposta de intervenção é dissertativo-argumentativa."],
-["Interpretação","No trecho “Choveu tanto que a rua virou rio”, a relação entre as orações é de:",["Causa","Consequência","Oposição","Finalidade"],1,"“Tanto que” introduz o resultado do que foi dito: consequência."],
-["Variação linguística","Usar “tu vai” em vez de “tu vais” em uma conversa informal exemplifica:",["Erro que impede a comunicação","Variação linguística","Texto técnico","Arcaísmo"],1,"É variação de registro e região; o contexto define a adequação."],
-["Funções da linguagem","Um anúncio que tenta convencer o leitor a comprar um produto predomina a função:",["Poética","Referencial","Conativa","Metalinguística"],2,"A função conativa (apelativa) busca persuadir o receptor."],
-["Pontuação","Qual frase usa corretamente a vírgula?",["Maria, foi ao mercado.","Os alunos, estudaram muito.","Ontem, fui à escola.","Pedro e, Ana saíram."],2,"Adjunto adverbial no início pode ser seguido de vírgula; não se separa sujeito e verbo."]]},
-fis:{n:"Física",e:"⚡",q:[
-["Cinemática","Converta 72 km/h para m/s.",["10 m/s","20 m/s","72 m/s","259 m/s"],1,"Divida por 3,6: 72 ÷ 3,6 = 20 m/s."],
-["Dinâmica","Um corpo de 5 kg recebe aceleração de 3 m/s². Qual a força resultante?",["8 N","1,7 N","15 N","30 N"],2,"Segunda lei de Newton: F = m·a = 5·3 = 15 N."],
-["Eletricidade","Um resistor de 4 Ω está ligado a 12 V. Qual a corrente?",["3 A","8 A","16 A","48 A"],0,"Lei de Ohm: i = U/R = 12/4 = 3 A."],
-["Ondulatória","Uma onda tem λ = 2 m e frequência de 5 Hz. Qual sua velocidade?",["2,5 m/s","7 m/s","10 m/s","0,4 m/s"],2,"v = λ·f = 2·5 = 10 m/s."],
-["Termologia","A água ferve a 100 °C. Quanto vale essa temperatura em kelvin?",["273 K","373 K","100 K","473 K"],1,"K = °C + 273 = 373 K."],
-["Acústica","O eco está ligado a qual fenômeno ondulatório?",["Refração","Difração","Reflexão","Polarização"],2,"O som reflete em um obstáculo e retorna ao ouvinte."],
-["Energia","Qual a energia cinética de um corpo de 2 kg a 3 m/s?",["6 J","9 J","12 J","18 J"],1,"Ec = m·v²/2 = 2·9/2 = 9 J."],
-["Potência elétrica","Qual a potência de um chuveiro de 220 V que consome 10 A?",["22 W","230 W","2.200 W","4.400 W"],2,"P = U·i = 220·10 = 2.200 W."]]},
-qui:{n:"Química",e:"🧪",q:[
-["Ácidos e bases","Uma solução com pH 3 é:",["Básica","Neutra","Ácida","Salina apenas"],2,"pH menor que 7 indica meio ácido."],
-["Mol e massa","Qual a massa molar da água (H₂O)? (H = 1; O = 16)",["16 g/mol","17 g/mol","18 g/mol","34 g/mol"],2,"2·1 + 16 = 18 g/mol."],
-["Ligações químicas","Qual par forma tipicamente uma ligação iônica?",["H e O","Na e Cl","C e H","N e N"],1,"Metal (Na) + ametal (Cl) transferem elétrons: ligação iônica."],
-["Química orgânica","O grupo funcional característico dos álcoois é:",["–COOH","–CHO","–OH ligado a carbono saturado","–NH₂"],2,"Álcoois têm hidroxila (–OH) ligada a carbono saturado."],
-["Estequiometria","Em 2 H₂ + O₂ → 2 H₂O, quantos mols de H₂O se formam com 2 mols de O₂?",["2","3","4","8"],2,"A proporção é 1 O₂ : 2 H₂O, então 2 mols de O₂ formam 4 mols de H₂O."],
-["Soluções","Uma solução tem 10 g de soluto em 0,5 L. Qual a concentração?",["5 g/L","10 g/L","20 g/L","0,05 g/L"],2,"C = m/V = 10/0,5 = 20 g/L."],
-["Tabela periódica","Os elementos do grupo 18 são chamados de:",["Halogênios","Metais alcalinos","Gases nobres","Calcogênios"],2,"Grupo 18 (He, Ne, Ar…): gases nobres."],
-["Termoquímica","Uma reação que libera calor para o ambiente é:",["Endotérmica","Exotérmica","Isotérmica","Neutra"],1,"Exotérmica: ΔH negativo."]]},
-bio:{n:"Biologia",e:"🧬",q:[
-["Genética","No cruzamento Aa × Aa, qual a proporção fenotípica esperada (A dominante)?",["1:1","3:1","1:2:1","4:0"],1,"AA, Aa, Aa mostram o dominante e aa o recessivo: 3:1."],
-["Ecologia","Em uma cadeia alimentar, os organismos que produzem a própria energia são os:",["Consumidores","Decompositores","Produtores","Parasitas"],2,"Produtores fazem fotossíntese ou quimiossíntese."],
-["Evolução","A teoria da seleção natural foi proposta por:",["Mendel","Darwin","Lamarck","Pasteur"],1,"Charles Darwin (junto com Wallace) propôs a seleção natural."],
-["Citologia","Qual organela é responsável pela respiração celular?",["Ribossomo","Lisossomo","Mitocôndria","Complexo golgiense"],2,"A mitocôndria produz ATP na respiração celular."],
-["Fisiologia","Qual sistema defende o organismo contra agentes infecciosos?",["Digestório","Imunológico","Excretor","Endócrino"],1,"O sistema imunológico produz células e anticorpos de defesa."],
-["Impactos ambientais","O aumento do efeito estufa está mais associado ao acúmulo de:",["Oxigênio","Nitrogênio","Gás carbônico","Hélio"],2,"CO₂ e metano retêm calor na atmosfera."],
-["Saúde pública","A dengue é transmitida pelo mosquito:",["Anopheles","Aedes aegypti","Culex","Barbeiro"],1,"O Aedes aegypti também transmite zika e chikungunya."],
-["Fotossíntese","Qual gás é liberado na fotossíntese?",["Gás carbônico","Metano","Oxigênio","Nitrogênio"],2,"CO₂ + H₂O + luz → glicose + O₂."]]},
-his:{n:"História",e:"🏛️",q:[
-["Era Vargas","A CLT (Consolidação das Leis do Trabalho) foi criada em:",["1930","1943","1964","1988"],1,"Decreto-Lei de 1943, no Estado Novo de Vargas."],
-["Ditadura militar","O golpe que iniciou a ditadura militar brasileira ocorreu em:",["1954","1961","1964","1985"],2,"Março/abril de 1964."],
-["Guerra Fria","A Guerra Fria foi a disputa de influência entre:",["França e Alemanha","EUA e URSS","China e Japão","Inglaterra e Rússia"],1,"Duas superpotências, capitalista e socialista, sem confronto direto."],
-["República Velha","A “política do café com leite” alternava no poder oligarquias de:",["Bahia e Pernambuco","RS e SC","SP e MG","Piauí e Ceará"],2,"Elites paulistas (café) e mineiras (leite)."],
-["Revolução Industrial","A Revolução Industrial começou no século XVIII em qual país?",["França","Inglaterra","Alemanha","EUA"],1,"Na Inglaterra, com a máquina a vapor e a indústria têxtil."],
-["Segunda Guerra","O Holocausto foi o genocídio promovido por qual regime?",["Fascista italiano","Stalinista","Nazista","Franquista"],2,"O regime nazista perseguiu e assassinou milhões de judeus e outros grupos."],
-["Redemocratização","A Constituição Cidadã do Brasil foi promulgada em:",["1964","1979","1988","1994"],2,"Em 5 de outubro de 1988."],
-["Brasil Colônia","A principal mão de obra da economia açucareira colonial foi:",["Assalariada","Escravizada","Imigrante europeia","Servil feudal"],1,"A economia colonial se baseou no trabalho de africanos escravizados."]]},
-geo:{n:"Geografia",e:"🌎",q:[
-["Biomas","Qual bioma predomina no semiárido nordestino?",["Cerrado","Caatinga","Mata Atlântica","Pampa"],1,"A Caatinga é exclusivamente brasileira e típica do semiárido."],
-["Globalização","A globalização se caracteriza principalmente por:",["Isolamento entre países","Maior integração econômica, cultural e tecnológica","Fim das fronteiras políticas","Queda do comércio"],1,"Redes de comunicação e transporte ampliaram a integração mundial."],
-["Urbanização","O principal fator da urbanização acelerada no Brasil no século XX foi:",["Êxodo rural","Reforma agrária","Imigração europeia","Queda da natalidade"],0,"Migração do campo para a cidade, atraída por indústria e serviços."],
-["Energia","Qual é uma fonte de energia renovável?",["Carvão mineral","Petróleo","Gás natural","Eólica"],3,"Vento é recurso renovável; o Nordeste tem grande destaque em eólica."],
-["Demografia","Uma pirâmide etária com base estreita e topo largo indica população:",["Jovem","Envelhecida","Em explosão demográfica","Sem idosos"],1,"Baixa natalidade e maior expectativa de vida levam ao envelhecimento."],
-["Clima","O fenômeno El Niño é caracterizado por:",["Resfriamento do Atlântico","Aquecimento anormal do Pacífico","Falta de vento","Aumento de geleiras"],1,"É o aquecimento das águas do Pacífico equatorial, que altera chuvas e secas."],
-["Geopolítica","A ONU foi criada em 1945 com o objetivo principal de:",["Dividir territórios","Manter a paz e a cooperação","Controlar o petróleo","Unificar moedas"],1,"Surgiu após a Segunda Guerra para promover paz e cooperação."],
-["Agropecuária","O cultivo de um só produto em grande área, voltado à exportação, é chamado de:",["Policultura","Monocultura","Agricultura de subsistência","Permacultura"],1,"Monocultura: típica do agronegócio exportador."]]}
-};
-const $=s=>document.querySelector(s), app=$("#app");
-const esc=t=>String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-let S={step:"info",nome:"",escola:"",turma:"",subj:"",i:0,ans:[],rec:null};
+<body class="min-h-screen flex flex-col selection:bg-amber-200 selection:text-stone-900">
 
-function go(st){S.step=st;render()}
-function render(){({info:vInfo,quiz:vQuiz,res:vRes})[S.step]();window.scrollTo(0,0)}
+    <!-- TOP NAVIGATION BAR (Editorial & Compact) -->
+    <header class="sticky top-0 z-30 border-b border-[#DFD9CE] dark:border-[#2E2E2A] bg-[#F7F4ED]/95 dark:bg-[#121211]/95 backdrop-blur-sm">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+            
+            <!-- Left: Brand Identity -->
+            <div class="flex items-center gap-3">
+                <a href="#" onclick="selectArea('all'); return false;" class="flex items-center gap-2.5 group">
+                    <div class="w-8 h-8 rounded bg-[#161615] dark:bg-[#F3F0E6] text-[#F7F4ED] dark:text-[#161615] flex items-center justify-center font-mono font-bold text-xs tracking-tighter border border-[#161615]">
+                        EN<br>26
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-1.5">
+                            <span class="font-bold text-sm tracking-tight">caderno.enem</span>
+                            <span class="font-mono text-[10px] px-1.5 py-0.2 bg-[#EFECE4] dark:bg-[#242421] border border-[#DFD9CE] dark:border-[#3A3A35] rounded text-[#5C5852] dark:text-[#A09C94]">ed.2026</span>
+                        </div>
+                        <span class="text-[11px] text-[#5C5852] dark:text-[#A09C94] hidden sm:inline">Caderno de Resolução Comentada & Matriz TRI</span>
+                    </div>
+                </a>
+            </div>
 
-function vInfo(){
-  app.innerHTML=`<h1>Quiz Diagnóstico · 3º Ano</h1>
-  <p class="mu">Ensino Médio · Rede Estadual do Piauí. Escolha a matéria em que você sente mais dificuldade e responda 8 questões. No final você recebe seu feedback imediato!</p>
-  <div class="card">
-    <label for="n">Nome completo</label><input id="n" value="${esc(S.nome)}" autocomplete="name">
-    <label for="e">Escola</label><input id="e" value="${esc(S.escola)}">
-    <label for="t">Turma</label><input id="t" value="${esc(S.turma)}" placeholder="Ex.: 3º A">
-    <label>Em qual matéria você tem mais dificuldade?</label>
-    <div class="grid">${Object.entries(Q).map(([k,v])=>`<button class="sub ${S.subj===k?"on":""}" data-k="${k}"><span class="e">${v.e}</span>${v.n}</button>`).join("")}</div>
-    <button class="btn" id="go">Começar o quiz</button>
-  </div>`;
-  const chk=()=>{S.nome=$("#n").value.trim();S.escola=$("#e").value.trim();S.turma=$("#t").value.trim();$("#go").disabled=!(S.nome&&S.escola&&S.turma&&S.subj)};
-  app.querySelectorAll("input").forEach(i=>i.oninput=chk);
-  app.querySelectorAll(".sub").forEach(b=>b.onclick=()=>{S.subj=b.dataset.k;app.querySelectorAll(".sub").forEach(x=>x.classList.toggle("on",x===b));chk()});
-  $("#go").onclick=()=>{S.i=0;S.ans=[];go("quiz")};chk();
-}
+            <!-- Center: Area Switcher Pills (Desktop) -->
+            <nav id="top-area-nav" class="hidden xl:flex items-center bg-[#EFECE4] dark:bg-[#1A1A18] p-1 rounded-lg border border-[#DFD9CE] dark:border-[#2E2E2A] gap-0.5">
+                <!-- Populated by JS -->
+            </nav>
 
-function vQuiz(){
-  const m=Q[S.subj],q=m.q[S.i],n=m.q.length,sel=S.ans[S.i];
-  app.innerHTML=`<div class="mu">${m.e} ${m.n} · Questão ${S.i+1} de ${n}</div>
-  <div class="bar"><i style="width:${(S.i/n)*100}%"></i></div>
-  <div class="card"><span class="tag">${q[0]}</span><h2 style="margin-top:10px">${esc(q[1])}</h2>
-  ${q[2].map((o,j)=>`<button class="opt ${sel===j?"sel":""}" data-j="${j}">${"ABCD"[j]}) ${esc(o)}</button>`).join("")}
-  <button class="btn" id="nx" ${sel==null?"disabled":""}>${S.i===n-1?"Finalizar":"Próxima"}</button></div>`;
-  app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{S.ans[S.i]=+b.dataset.j;vQuiz()});
-  $("#nx").onclick=()=>{S.i<n-1?(S.i++,vQuiz()):finish()};
-}
+            <!-- Right: Utility Controls -->
+            <div class="flex items-center gap-2">
+                <!-- Search Input with "/" shortcut -->
+                <div class="relative hidden md:block w-52 lg:w-64">
+                    <svg class="w-3.5 h-3.5 text-[#5C5852] absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        oninput="applyFilters()" 
+                        placeholder="Buscar tema ou questão..." 
+                        class="w-full pl-8 pr-7 py-1.5 text-xs bg-white dark:bg-[#1A1A18] border border-[#DFD9CE] dark:border-[#2E2E2A] rounded-md focus:outline-none focus:border-[#161615] dark:focus:border-[#F3F0E6] transition"
+                    >
+                    <kbd class="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-[10px] text-[#5C5852] bg-[#EFECE4] dark:bg-[#242421] px-1 rounded border border-[#DFD9CE] dark:border-[#3A3A35]">/</kbd>
+                </div>
 
-function finish(){
-  const m=Q[S.subj],tp={};let ac=0;
-  m.q.forEach((q,i)=>{const ok=S.ans[i]===q[3];ac+=ok;tp[q[0]]=ok?1:0});
-  const pct=Math.round(ac/m.q.length*100);
-  const nivel=pct>=75?"Bom domínio":pct>=50?"Em desenvolvimento":"Precisa de reforço";
-  S.rec={nome:S.nome,escola:S.escola,turma:S.turma,materia:m.n,acertos:ac,total:m.q.length,pct,nivel,topicos:tp,respostas:S.ans};
-  go("res");
-}
+                <!-- View Mode Toggle (Foco 1 por vez vs Lista) -->
+                <button onclick="toggleViewMode()" id="btn-view-mode" class="px-2.5 py-1.5 rounded-md text-xs font-medium bg-white dark:bg-[#1A1A18] border border-[#DFD9CE] dark:border-[#2E2E2A] hover:border-[#161615] dark:hover:border-[#A09C94] transition flex items-center gap-1.5" title="Alternar entre Modo Foco (1 questão) e Lista Corrida">
+                    <svg class="w-3.5 h-3.5 text-[#C84B31]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span id="view-mode-text">Modo: Foco</span>
+                </button>
 
-function vRes(){
-  const m=Q[S.subj],r=S.rec,cls=r.pct>=75?"l-ok":r.pct>=50?"l-wa":"l-er";
-  const msg=r.pct>=75?"Parabéns! Você já domina boa parte desta matéria. Continue praticando com questões do ENEM e do SAEPI para consolidar.":r.pct>=50?"Você está no caminho certo, mas ainda há pontos para fortalecer. Reveja os tópicos marcados abaixo e resolva exercícios sobre eles.":"Sem problema: este quiz serve justamente para mostrar por onde começar. Faça uma revisão dos tópicos abaixo, peça ajuda ao professor e estude um pouco por dia.";
-  app.innerHTML=`<h1>Seu feedback, ${esc(r.nome.split(" ")[0])}</h1>
-  <div class="card"><div class="mu">${m.e} ${m.n}</div><div class="score">${r.acertos}/${r.total}</div>
-  <div class="lvl ${cls}">${r.nivel} · ${r.pct}%</div><p>${msg}</p></div>
-  <div class="card"><h2>Por tópico</h2>${Object.entries(r.topicos).map(([t,v])=>`<div class="tp"><span>${t}</span><b style="color:var(--${v?"ok":"er"})">${v?"Acertou":"Revisar"}</b></div>`).join("")}</div>
-  <div class="card"><h2>Revisão das questões</h2>${m.q.map((q,i)=>{const ok=S.ans[i]===q[3];return `<div class="rev ${ok?"c":"w"}"><b>${i+1}. ${esc(q[1])}</b><br>Sua resposta: ${esc(q[2][S.ans[i]])} ${ok?"✔":"✘"}<br>${ok?"":`Correta: <b>${esc(q[2][q[3]])}</b><br>`}<span class="mu">${esc(q[4])}</span></div>`}).join("")}</div>
-  <button class="btn sec" id="again">Fazer outro quiz</button>`;
-  $("#again").onclick=()=>{S.subj="";S.rec=null;go("info")};
-}
+                <!-- TRI & Performance Modal Button -->
+                <button onclick="openTriModal()" class="px-2.5 py-1.5 rounded-md text-xs font-medium bg-white dark:bg-[#1A1A18] border border-[#DFD9CE] dark:border-[#2E2E2A] hover:border-[#161615] dark:hover:border-[#A09C94] transition flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                    <span class="font-mono font-semibold" id="nav-score-pill">0/24</span>
+                    <span class="hidden sm:inline text-[#5C5852] dark:text-[#A09C94]">Relatório TRI</span>
+                </button>
 
-render();
-</script>
+                <!-- Add Question Button -->
+                <button onclick="openNewQuestionModal()" class="px-2.5 py-1.5 rounded-md text-xs font-semibold bg-[#161615] dark:bg-[#F3F0E6] text-[#F7F4ED] dark:text-[#161615] hover:opacity-90 transition flex items-center gap-1">
+                    <span>+ Questão</span>
+                </button>
+
+                <!-- Theme Toggle -->
+                <button onclick="toggleTheme()" class="p-1.5 rounded-md bg-white dark:bg-[#1A1A18] border border-[#DFD9CE] dark:border-[#2E2E2A] text-[#5C5852] dark:text-[#A09C94] hover:text-[#161615] dark:hover:text-white transition" title="Alternar Papel Claro / Modo Noturno">
+                    <svg class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                    <svg class="w-4 h-4 hidden dark:block text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile/Tablet Area Bar -->
+        <div id="mobile-area-nav" class="xl:hidden flex items-center gap-1.5 overflow-x-auto px-4 py-2 border-t border-[#DFD9CE] dark:border-[#2E2E2A] bg-[#EFECE4]/60 dark:bg-[#1A1A18]">
+            <!-- Populated by JS -->
+        </div>
+    </header>
+
+    <!-- MAIN 2-COLUMN WORKSPACE -->
+    <div class="max-w-[1400px] w-full mx-auto px-4 sm:px-6 py-6 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- LEFT / MAIN COLUMN: THE EXAM DESK (8 cols on lg) -->
+        <main class="lg:col-span-8 xl:col-span-9 space-y-6">
+            
+            <!-- Active Filter Context Bar -->
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#DFD9CE] dark:border-[#2E2E2A]">
+                <div class="flex items-center gap-2">
+                    <span id="active-area-indicator" class="font-bold text-sm tracking-tight">Caderno Geral — Todas as Áreas</span>
+                    <span class="text-xs text-[#5C5852] dark:text-[#A09C94] font-mono" id="active-filter-count">(24 questões)</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <!-- Toggle Highlighter Mode -->
+                    <button onclick="toggleHighlighterMode()" id="btn-highlighter" class="px-2.5 py-1 rounded text-xs font-medium border border-[#DFD9CE] dark:border-[#2E2E2A] bg-white dark:bg-[#1A1A18] flex items-center gap-1.5 transition" title="Ativar caneta marca-texto para grifar frases do texto-base (Atalho: M)">
+                        <span class="w-2.5 h-2.5 rounded-sm bg-yellow-300 border border-yellow-500"></span>
+                        <span>Marca-texto</span>
+                        <kbd class="font-mono text-[10px] opacity-60">M</kbd>
+                    </button>
+
+                    <!-- Global Toggle for "Como Resolver" -->
+                    <label class="inline-flex items-center gap-2 cursor-pointer text-xs text-[#5C5852] dark:text-[#A09C94] select-none">
+                        <input type="checkbox" id="always-show-guide" checked onchange="toggleGuideDefault()" class="rounded border-[#C8C0B3] text-[#C84B31] focus:ring-0 w-3.5 h-3.5">
+                        <span>Exibir <strong class="text-[#161615] dark:text-[#F3F0E6]">"Como Resolver"</strong> aberto antes das alternativas</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- FOCUS MODE TOP BAR (Prev / Next Navigation) -->
+            <div id="focus-top-bar" class="hidden flex items-center justify-between bg-[#EFECE4] dark:bg-[#1A1A18] px-3.5 py-2 rounded-lg border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                <button onclick="navigateFocus(-1)" id="btn-prev-top" class="px-2.5 py-1 rounded text-xs font-semibold bg-white dark:bg-[#242421] border border-[#DFD9CE] dark:border-[#3A3A35] disabled:opacity-40 flex items-center gap-1 hover:border-[#161615] transition">
+                    <span>← Anterior</span>
+                    <kbd class="hidden sm:inline font-mono text-[10px] opacity-60">[←]</kbd>
+                </button>
+                <div class="flex items-center gap-2 font-mono text-xs">
+                    <span id="focus-counter-top" class="font-bold">Questão 01 de 24</span>
+                </div>
+                <button onclick="navigateFocus(1)" id="btn-next-top" class="px-2.5 py-1 rounded text-xs font-semibold bg-[#161615] dark:bg-[#F3F0E6] text-white dark:text-[#161615] disabled:opacity-40 flex items-center gap-1 hover:opacity-90 transition">
+                    <span>Próxima →</span>
+                    <kbd class="hidden sm:inline font-mono text-[10px] opacity-70">[→]</kbd>
+                </button>
+            </div>
+
+            <!-- QUESTIONS FEED / ACTIVE CARD -->
+            <div id="questions-container" class="space-y-8">
+                <!-- Rendered via JS -->
+            </div>
+
+            <!-- FOCUS MODE BOTTOM BAR -->
+            <div id="focus-bottom-bar" class="hidden flex items-center justify-between pt-4 border-t border-[#DFD9CE] dark:border-[#2E2E2A]">
+                <button onclick="navigateFocus(-1)" id="btn-prev-bottom" class="px-4 py-2 rounded-md text-xs font-semibold bg-white dark:bg-[#1A1A18] border border-[#DFD9CE] dark:border-[#2E2E2A] disabled:opacity-40 hover:border-[#161615] transition">
+                    ← Questão Anterior
+                </button>
+                <span id="focus-counter-bottom" class="font-mono text-xs text-[#5C5852] dark:text-[#A09C94]">01 / 24</span>
+                <button onclick="navigateFocus(1)" id="btn-next-bottom" class="tactile-btn px-4 py-2 rounded-md text-xs font-semibold bg-[#C84B31] text-white disabled:opacity-40">
+                    Próxima Questão →
+                </button>
+            </div>
+
+        </main>
+
+        <!-- RIGHT COLUMN: STICKY "CARTÃO-RESPOSTA & FILTROS" SIDEBAR (4 cols on lg) -->
+        <aside class="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-20 space-y-4">
+            
+            <!-- Cartão-Resposta (Gabarito Grid) -->
+            <div class="editorial-card rounded-xl p-4">
+                <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#DFD9CE] dark:border-[#2E2E2A]">
+                    <div>
+                        <h2 class="font-bold text-xs uppercase tracking-wider text-[#161615] dark:text-[#F3F0E6]">Cartão-Resposta</h2>
+                        <p class="text-[11px] text-[#5C5852] dark:text-[#A09C94]">Mapa de navegação rápida</p>
+                    </div>
+                    <button onclick="resetAllAnswers()" class="text-[11px] font-mono text-[#C84B31] hover:underline" title="Limpar todas as marcações do caderno">
+                        Limpar folha
+                    </button>
+                </div>
+
+                <!-- Score Summary Strip -->
+                <div class="grid grid-cols-3 gap-2 mb-3 bg-[#F7F4ED] dark:bg-[#121211] p-2.5 rounded-lg border border-[#DFD9CE] dark:border-[#2E2E2A] font-mono text-xs">
+                    <div>
+                        <span class="block text-[10px] text-[#5C5852] dark:text-[#A09C94]">ACERTOS</span>
+                        <span id="side-correct" class="font-bold text-emerald-700 dark:text-emerald-400 text-sm">0</span>
+                    </div>
+                    <div>
+                        <span class="block text-[10px] text-[#5C5852] dark:text-[#A09C94]">ERROS</span>
+                        <span id="side-wrong" class="font-bold text-[#C84B31] dark:text-rose-400 text-sm">0</span>
+                    </div>
+                    <div>
+                        <span class="block text-[10px] text-[#5C5852] dark:text-[#A09C94]">TAXA</span>
+                        <span id="side-rate" class="font-bold text-[#161615] dark:text-white text-sm">0%</span>
+                    </div>
+                </div>
+
+                <!-- Numbered Grid (01 to 24) -->
+                <div id="gabarito-grid" class="grid grid-cols-6 gap-1.5">
+                    <!-- Populated by JS -->
+                </div>
+
+                <!-- Legend -->
+                <div class="mt-3 pt-2.5 border-t border-[#DFD9CE] dark:border-[#2E2E2A] flex items-center justify-between text-[10px] font-mono text-[#5C5852] dark:text-[#A09C94]">
+                    <span class="flex items-center gap-1"><i class="w-2 h-2 rounded-full bg-emerald-600 inline-block"></i> Acerto</span>
+                    <span class="flex items-center gap-1"><i class="w-2 h-2 rounded-full bg-[#C84B31] inline-block"></i> Erro</span>
+                    <span class="flex items-center gap-1"><i class="w-2 h-2 rounded-full bg-amber-500 inline-block"></i> Revisar</span>
+                </div>
+            </div>
+
+            <!-- Filtros do Caderno -->
+            <div class="editorial-card rounded-xl p-4 space-y-3">
+                <h3 class="font-bold text-xs uppercase tracking-wider text-[#161615] dark:text-[#F3F0E6]">Filtros de Estudo</h3>
+                
+                <div class="space-y-2">
+                    <label class="block text-[11px] font-medium text-[#5C5852] dark:text-[#A09C94]">Status de Resolução</label>
+                    <select id="filter-status" onchange="applyFilters()" class="w-full px-2.5 py-1.5 text-xs rounded-md bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A] focus:outline-none">
+                        <option value="all">Todas as questões</option>
+                        <option value="unanswered">Pendentes (Não respondidas)</option>
+                        <option value="wrong">Caderno de Erros (Refazer)</option>
+                        <option value="correct">Resolvidas com Acerto</option>
+                        <option value="bookmarked">Marcadas para Revisão (★)</option>
+                    </select>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="block text-[11px] font-medium text-[#5C5852] dark:text-[#A09C94]">Calibragem TRI (Dificuldade)</label>
+                    <select id="filter-difficulty" onchange="applyFilters()" class="w-full px-2.5 py-1.5 text-xs rounded-md bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A] focus:outline-none">
+                        <option value="all">Todos os níveis TRI</option>
+                        <option value="Fácil">Fácil — Base de Coerência TRI</option>
+                        <option value="Médio">Médio — Consistência de Nota</option>
+                        <option value="Difícil">Difícil — Topo de Proficiência</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Coerência TRI Compact Card -->
+            <div class="editorial-card rounded-xl p-4 space-y-2.5">
+                <div class="flex items-center justify-between">
+                    <span class="font-bold text-xs uppercase tracking-wider">Termômetro TRI</span>
+                    <span id="tri-coherence-badge" class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-[#EFECE4] dark:bg-[#242421] text-[#5C5852] dark:text-[#A09C94]">Aguardando dados</span>
+                </div>
+                <div class="space-y-2 pt-1 font-mono text-xs">
+                    <div>
+                        <div class="flex justify-between text-[11px] mb-0.5">
+                            <span>Fáceis (Peso Alto)</span>
+                            <span id="tri-bar-easy-label">0/0</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-[#EFECE4] dark:bg-[#242421] rounded-full overflow-hidden">
+                            <div id="tri-bar-easy" class="h-full bg-emerald-600 transition-all duration-300" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-[11px] mb-0.5">
+                            <span>Médias</span>
+                            <span id="tri-bar-med-label">0/0</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-[#EFECE4] dark:bg-[#242421] rounded-full overflow-hidden">
+                            <div id="tri-bar-med" class="h-full bg-amber-600 transition-all duration-300" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-[11px] mb-0.5">
+                            <span>Difíceis</span>
+                            <span id="tri-bar-hard-label">0/0</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-[#EFECE4] dark:bg-[#242421] rounded-full overflow-hidden">
+                            <div id="tri-bar-hard" class="h-full bg-[#C84B31] transition-all duration-300" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Keyboard Shortcuts Reference -->
+            <div class="px-3 py-2.5 rounded-lg border border-dashed border-[#C8C0B3] dark:border-[#2E2E2A] text-[11px] text-[#5C5852] dark:text-[#A09C94] space-y-1 hidden lg:block">
+                <div class="font-mono font-semibold text-[10px] uppercase tracking-wider text-[#161615] dark:text-[#F3F0E6]">Atalhos de Teclado</div>
+                <div class="grid grid-cols-2 gap-x-2 gap-y-1 font-mono text-[10px]">
+                    <span><kbd class="px-1 bg-white dark:bg-[#1A1A18] border rounded">A</kbd>-<kbd class="px-1 bg-white dark:bg-[#1A1A18] border rounded">E</kbd> Marcar</span>
+                    <span><kbd class="px-1 bg-white dark:bg-[#1A1A18] border rounded">←</kbd> <kbd class="px-1 bg-white dark:bg-[#1A1A18] border rounded">→</kbd> Navegar</span>
+                    <span><kbd class="px-1 bg-white dark:bg-[#1A1A18] border rounded">H</kbd> Como Resolver</span>
+                    <span><kbd class="px-1 bg-white dark:bg-[#1A1A18] border rounded">M</kbd> Marca-texto</span>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- MODAL: RELATÓRIO DE COERÊNCIA TRI -->
+    <div id="tri-modal" class="fixed inset-0 z-50 hidden bg-black/60 flex items-center justify-center p-4">
+        <div class="editorial-card rounded-xl max-w-lg w-full p-6 space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-[#DFD9CE] dark:border-[#2E2E2A]">
+                <div>
+                    <span class="font-mono text-[10px] uppercase tracking-widest text-[#C84B31] font-bold">Diagnóstico Pedagógico</span>
+                    <h3 class="text-base font-bold">Relatório de Coerência TRI — ENEM 2026</h3>
+                </div>
+                <button onclick="closeTriModal()" class="text-lg font-mono px-2 hover: opacity-70">&times;</button>
+            </div>
+            <div id="tri-modal-body" class="space-y-4 text-xs leading-relaxed">
+                <!-- Populated by JS -->
+            </div>
+            <div class="flex justify-end pt-3 border-t border-[#DFD9CE] dark:border-[#2E2E2A]">
+                <button onclick="closeTriModal()" class="px-4 py-1.5 rounded bg-[#161615] dark:bg-[#F3F0E6] text-white dark:text-[#161615] text-xs font-semibold">Fechar Relatório</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: ADICIONAR QUESTÃO AUTORAL -->
+    <div id="new-question-modal" class="fixed inset-0 z-50 hidden bg-black/60 flex items-center justify-center p-4 overflow-y-auto">
+        <div class="editorial-card rounded-xl max-w-2xl w-full p-6 my-8 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between pb-3 border-b border-[#DFD9CE] dark:border-[#2E2E2A]">
+                <div>
+                    <span class="font-mono text-[10px] uppercase tracking-widest text-[#C84B31] font-bold">Editor de Itens INEP</span>
+                    <h3 class="text-base font-bold">Cadastrar Nova Questão no Caderno</h3>
+                </div>
+                <button onclick="closeNewQuestionModal()" class="text-lg font-mono px-2">&times;</button>
+            </div>
+            <form id="new-question-form" onsubmit="saveCustomQuestion(event)" class="space-y-3.5 mt-4 text-xs">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div>
+                        <label class="block font-semibold mb-1">Área do Conhecimento</label>
+                        <select id="nq-area" required class="w-full p-2 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                            <option value="linguagens">Linguagens e Códigos</option>
+                            <option value="humanas">Ciências Humanas</option>
+                            <option value="natureza">Ciências da Natureza</option>
+                            <option value="matematica">Matemática</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Calibragem TRI</label>
+                        <select id="nq-diff" required class="w-full p-2 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                            <option value="Fácil">Fácil</option>
+                            <option value="Médio" selected>Médio</option>
+                            <option value="Difícil">Difícil</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Tópico / Assunto</label>
+                        <input type="text" id="nq-topic" required placeholder="Ex: Eletrodinâmica / Modernismo" class="w-full p-2 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">1. Texto-Base da Questão</label>
+                    <textarea id="nq-context" rows="3" required placeholder="Texto motivador, citação ou situação-problema..." class="w-full p-2 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A] font-serif"></textarea>
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Enunciado / Comando</label>
+                    <input type="text" id="nq-command" required placeholder="Ex: Nesse contexto, o fenômeno analisado resulta diretamente da:" class="w-full p-2 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                </div>
+                <div class="blueprint-note p-3 rounded space-y-2">
+                    <label class="block font-bold text-amber-900 dark:text-amber-300">2. Guia "Como Resolver Ela" (Exibido antes das alternativas)</label>
+                    <input type="text" id="nq-step1" required placeholder="Leitura do comando: O que a questão realmente quer?" class="w-full p-1.5 rounded bg-white dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                    <input type="text" id="nq-step2" required placeholder="Pista ou Fórmula: Qual trecho ou equação destrava o item?" class="w-full p-1.5 rounded bg-white dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                    <input type="text" id="nq-step3" required placeholder="Pegadinha clássica: Qual erro comum deve ser evitado?" class="w-full p-1.5 rounded bg-white dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                </div>
+                <div class="space-y-1.5">
+                    <label class="block font-semibold">3. Alternativas (A até E)</label>
+                    <input type="text" id="nq-opt0" required placeholder="A) Texto da alternativa A" class="w-full p-1.5 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                    <input type="text" id="nq-opt1" required placeholder="B) Texto da alternativa B" class="w-full p-1.5 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                    <input type="text" id="nq-opt2" required placeholder="C) Texto da alternativa C" class="w-full p-1.5 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                    <input type="text" id="nq-opt3" required placeholder="D) Texto da alternativa D" class="w-full p-1.5 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                    <input type="text" id="nq-opt4" required placeholder="E) Texto da alternativa E" class="w-full p-1.5 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div>
+                        <label class="block font-semibold mb-1">Gabarito Oficial</label>
+                        <select id="nq-correct" class="w-full p-2 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                            <option value="0">Alternativa A</option>
+                            <option value="1">Alternativa B</option>
+                            <option value="2">Alternativa C</option>
+                            <option value="3">Alternativa D</option>
+                            <option value="4">Alternativa E</option>
+                        </select>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label class="block font-semibold mb-1">4. Justificativa Detalhada do Gabarito</label>
+                        <input type="text" id="nq-exp" required placeholder="Explicação completa do gabarito e análise das opções..." class="w-full p-2 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                    </div>
+                </div>
+                <div class="flex justify-end gap-2 pt-3 border-t border-[#DFD9CE] dark:border-[#2E2E2A]">
+                    <button type="button" onclick="closeNewQuestionModal()" class="px-3 py-1.5 rounded border border-[#DFD9CE] dark:border-[#2E2E2A] font-medium">Cancelar</button>
+                    <button type="submit" class="px-4 py-1.5 rounded bg-[#C84B31] text-white font-semibold">Salvar no Caderno</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- APPLICATION LOGIC & 24 REVISED ENEM 2026 QUESTIONS -->
+    <script>
+        const AREAS_CONFIG = [
+            { id: 'all', name: 'Todas', fullTitle: 'Caderno Geral — 4 Áreas', dot: 'bg-stone-500' },
+            { id: 'linguagens', name: 'Linguagens', fullTitle: 'Linguagens, Códigos e suas Tecnologias', dot: 'bg-[#C84B31]' },
+            { id: 'humanas', name: 'Humanas', fullTitle: 'Ciências Humanas e suas Tecnologias', dot: 'bg-amber-600' },
+            { id: 'natureza', name: 'Natureza', fullTitle: 'Ciências da Natureza e suas Tecnologias', dot: 'bg-emerald-700' },
+            { id: 'matematica', name: 'Matemática', fullTitle: 'Matemática e suas Tecnologias', dot: 'bg-blue-700' }
+        ];
+
+        // 24 Complete Revised ENEM 2026 Questions
+        const INITIAL_QUESTIONS = [
+            // =========================================================================
+            // LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS (Q01 - Q06)
+            // =========================================================================
+            {
+                id: 1,
+                area: 'linguagens',
+                areaShort: 'Linguagens',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C5 • H16',
+                difficulty: 'Fácil',
+                topic: 'HQ "Confinada" e Ironia Visual nas Relações de Classe',
+                context: `Na história em quadrinhos Confinada, de Leandro Assis e Triscila Oliveira, acompanha-se o cotidiano de Ju, trabalhadora doméstica que passa a residir no apartamento da influenciadora digital Fran durante a crise sanitária. Em uma das tiras, enquanto a patroa grava vídeos para seus seguidores afirmando que "estamos todos no mesmo barco, aproveitando o isolamento para desacelerar e cuidar da mente", o quadro seguinte exibe, sem balões de fala, Ju limpando os extensos vidros da cobertura com máscara, uniforme e expressão de exaustão física.`,
+                source: 'ASSIS, L.; OLIVEIRA, T. Confinada. São Paulo: Todavia, 2021 (adaptado).',
+                command: 'A articulação entre as linguagens verbal e não verbal nessa sequência da história em quadrinhos cumpre a função estético-ideológica de:',
+                howToSolve: {
+                    commandAsk: 'Identificar o efeito crítico gerado pelo choque entre a fala da patroa ("estamos no mesmo barco / desacelerar") e a cena muda do trabalho exaustivo de Ju.',
+                    keyClues: 'Quadro 1: discurso verbal homogeneizador sobre "cuidar da mente". Quadro 2: silêncio verbal + imagem de exaustão física no serviço doméstico.',
+                    stepByStep: 'Compare o que é dito com o que é mostrado. A ausência de fala no segundo quadrinho funciona como um desmentido visual (ironia) que expõe o abismo de classe e raça no trabalho doméstico brasileiro.',
+                    trapAlert: 'Descarte opções que digam que a crítica é contra a tecnologia da internet em si (C) ou que a tirinha elogia a resiliência do trabalhador (E).'
+                },
+                options: [
+                    'promover a conciliação afetiva entre diferentes estratos sociais por meio do convívio doméstico prolongado.',
+                    'desconstruir, pela ironia visual, o discurso homogeneizador que invisibiliza os privilégios de classe nas relações de trabalho.',
+                    'demonstrar a ineficácia das plataformas digitais como ferramentas de comunicação interpessoal durante crises globais.',
+                    'restringir a crítica social ao âmbito individual, atribuindo os conflitos trabalhistas à falta de diálogo entre as personagens.',
+                    'enaltecer a resiliência do trabalhador brasileiro diante da modernização tecnológica dos serviços residenciais.'
+                ],
+                correctIndex: 1,
+                correctExplanation: 'A tirinha opera por contraposição irônica: enquanto o texto verbal da influenciadora universaliza um privilégio de classe ("estamos no mesmo barco"), o plano visual desmente essa igualdade ao mostrar a trabalhadora doméstica submetida à exaustão física.',
+                optionExplanations: [
+                    '[Distrator: Contradição] A obra evidencia a assimetria e a exploração laboral dentro do espaço doméstico, e não uma conciliação harmoniosa.',
+                    '[Gabarito Oficial] A oposição entre o discurso romantizado da patroa e a imagem silenciosa do trabalho braçal desmonta a falácia de que todos viveram a crise sob as mesmas condições materiais.',
+                    '[Distrator: Desvio de Foco] O alvo da crítica não é o funcionamento técnico das redes sociais, mas a hipocrisia de classe veiculada por meio delas.',
+                    '[Distrator: Reducionismo] "Confinada" retrata uma estrutura histórica de desigualdade social e racial no Brasil, não um mero problema psicológico de falta de conversa.',
+                    '[Distrator: Inversão Ideológica] A HQ denuncia a precarização e a herança servil, jamais romantizando o esgotamento físico como "resiliência louvável".'
+                ]
+            },
+            {
+                id: 2,
+                area: 'linguagens',
+                areaShort: 'Linguagens',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C8 • H25',
+                difficulty: 'Fácil',
+                topic: 'Dona Onete, Carimbó Chamegado e Patrimônio Linguístico',
+                context: `Quem quiser comer jambu / Tem que saber temperar / Bota um pouco de tucupi / Pimenta malagueta pra queimar / Quando o jambu começa a tremer / O caboclo começa a chamegar / No balanço das águas do Guamá... Conhecida como a rainha do "carimbó chamegado", a cantora e compositora paraense Dona Onete mobiliza em suas letras elementos da culinária, da fauna, da flora e do vocabulário ribeirinho amazônico.`,
+                source: 'ONETE, D. Feitiço Caboclo. Belém: Ná Music, 2012 (fragmento).',
+                command: 'Na canção de Dona Onete, a incorporação de vocábulos como "jambu", "tucupi", "caboclo" e "chamegar" evidencia que a variedade linguística regional atua como:',
+                howToSolve: {
+                    commandAsk: 'Reconhecer o papel identitário e cultural do vocabulário amazônico na letra musical.',
+                    keyClues: 'Termos da culinária e vivência paraense ("jambu", "tucupi", "chamegar", "águas do Guamá").',
+                    stepByStep: 'Na Competência 8 do ENEM, marcas regionais em produções artísticas são analisadas como patrimônio imaterial que inscreve a memória, os saberes e a identidade de uma comunidade na língua.',
+                    trapAlert: 'Nunca marque alternativas que tratem regionalismos como "barreira comunicativa" (A) ou "tentativa de extinguir a norma-padrão" (B).'
+                },
+                options: [
+                    'barreira comunicativa que restringe a fruição estética da obra musical ao público da Região Norte.',
+                    'desvio estilístico intencional voltado à substituição gradual da norma-padrão no cancioneiro popular.',
+                    'recurso expressivo de afirmação identitária que preserva saberes, afetos e territorialidades da cultura amazônica.',
+                    'registro arcaico da língua portuguesa cuja função principal é documentar falares em vias de extinção.',
+                    'adaptação mercadológica exigida pela indústria fonográfica para padronizar os ritmos folclóricos brasileiros.'
+                ],
+                correctIndex: 2,
+                correctExplanation: 'A escolha lexical de Dona Onete articula língua, território (Rio Guamá), gastronomia tradicional (jambu, tucupi) e afetividade (chamegar), funcionando como vetor de afirmação da identidade cultural paraense e amazônica.',
+                optionExplanations: [
+                    '[Distrator: Preconceito Linguístico] O uso de regionalismos enriquece o repertório cultural do país e não impede a fruição estética por ouvintes de outras regiões.',
+                    '[Distrator: Falsa Oposição] A expressão poética popular coexiste na língua sem qualquer pretensão de abolir a norma-padrão.',
+                    '[Gabarito Oficial] Os vocábulos regionais carregam a visão de mundo, os sabores e os modos de vida ribeirinhos como patrimônio cultural.',
+                    '[Distrator: Erro Factual] Vocábulos como "jambu" e "tucupi" são termos vivos e cotidianos no norte do país, e não arcaísmos mortos.',
+                    '[Distrator: Contradição] A força estética da obra decorre de sua singularidade regional, opondo-se à homogeneização industrial.'
+                ]
+            },
+            {
+                id: 3,
+                area: 'linguagens',
+                areaShort: 'Linguagens',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C5 • H15',
+                difficulty: 'Médio',
+                topic: '"O Pequeno Príncipe Preto" e Intertextualidade Decolonial',
+                context: `— Eu gosto de ouvir histórias de reis e rainhas africanos — disse o Pequeno Príncipe Preto. — No meu pequeno planeta, há uma árvore imensa chamada Baobá. Diferente do que dizem por aí, ela não é uma semente ruim que precisa ser arrancada. O Baobá é sagrado: é em torno do seu tronco que os mais velhos se sentam para transmitir a ancestralidade. E quando olho no espelho, vejo a beleza da minha pele retinta e da minha coroa crespa.`,
+                source: 'FRANÇA, R. O Pequeno Príncipe Preto. Rio de Janeiro: Nova Fronteira, 2020 (adaptado).',
+                command: 'Ao estabelecer um diálogo intertextual com o clássico francês de Antoine de Saint-Exupéry, a obra de Rodrigo França promove uma ressignificação literária que consiste em:',
+                howToSolve: {
+                    commandAsk: 'Analisar como o autor brasileiro reinterpreta os símbolos de "O Pequeno Príncipe" sob uma perspectiva afrocentrada.',
+                    keyClues: '"Diferente do que dizem por aí, ela [o Baobá] não é uma semente ruim... O Baobá é sagrado... transmitir a ancestralidade".',
+                    stepByStep: 'Na obra francesa original, o baobá era retratado como uma erva daninha perigosa ao asteroide. Rodrigo França subverte esse olhar eurocêntrico, resgatando o valor real do Baobá nas culturas africanas como árvore sagrada da palavra e da ancestralidade.',
+                    trapAlert: 'Cuidado com a opção E: não se trata de "paródia satírica para ridicularizar", mas de uma releitura poética afirmativa e decolonial.'
+                },
+                options: [
+                    'reproduzir fielmente a alegoria moral europeia para facilitar a alfabetização de crianças brasileiras.',
+                    'deslocar o eixo eurocêntrico da narrativa original, positivando símbolos da ancestralidade africana e a autoestima da infância negra.',
+                    'rejeitar o gênero fábula por considerá-lo incompatível com as demandas pedagógicas da educação antirracista.',
+                    'substituir a temática filosófica sobre a amizade por um relato historiográfico documental sobre o continente africano.',
+                    'utilizar a paródia satírica com o intuito de ridicularizar o cânone literário ocidental do século XX.'
+                ],
+                correctIndex: 1,
+                correctExplanation: 'A intertextualidade constrói um giro decolonial: o Baobá deixa de ser ameaça (como no texto francês) e assume seu estatuto africano de árvore sagrada da sabedoria ancestral, ao lado da valorização estética da infância negra.',
+                optionExplanations: [
+                    '[Distrator: Contradição] O narrador explicitamente contesta a metáfora original ao afirmar que o Baobá "não é uma semente ruim que precisa ser arrancada".',
+                    '[Gabarito Oficial] Promove um deslocamento epistêmico que resgata a sacralidade africana do Baobá e afirma a beleza negra ("pele retinta", "coroa crespa").',
+                    '[Distrator: Contradição Formal] O texto apropria-se justamente da estrutura poética e fabular para veicular sua mensagem.',
+                    '[Distrator: Confusão de Gênero] A obra permanece no campo da ficção lírica e filosófica infantil, não sendo um tratado acadêmico documental.',
+                    '[Distrator: Adequação Tonal] O tom do fragmento é lírico, afetivo e filosófico, distante do escárnio ou da ridicularização satírica.'
+                ]
+            },
+            {
+                id: 4,
+                area: 'linguagens',
+                areaShort: 'Linguagens',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C5 • H15',
+                difficulty: 'Difícil',
+                topic: 'Clarice Lispector ("A Paixão Segundo G.H.") e Fluxo Existencial',
+                context: `Vi. Sei que vi porque não dei ao que vi o meu sentido. Sei que vi — porque não entendi. A barata é pura sedução. Cílios, cílios pestanejando que chamam. Também eu, que aos poucos estava me reduzindo ao que em mim era irredutível, também eu tinha milhares de cílios pestanejando, e com os meus cílios eu avanço, eu protozoário, proteína pura. Segurei a mão da coisa inexplicável, e não soube mais o que era humano e o que era matéria viva bruta.`,
+                source: 'LISPECTOR, C. A paixão segundo G.H. Rio de Janeiro: Rocco, 2009.',
+                command: 'No fragmento do romance de Clarice Lispector, a experiência epifânica desencadeada pelo encontro da narradora com o inseto caracteriza-se pela:',
+                howToSolve: {
+                    commandAsk: 'Compreender o sentido filosófico e existencial da epifania de G.H. diante da barata.',
+                    keyClues: '"reduzindo ao que em mim era irredutível", "eu protozoário, proteína pura", "não soube mais o que era humano e o que era matéria viva bruta".',
+                    stepByStep: 'Na prosa introspectiva de Clarice Lispector, o choque com o inseto provoca a perda das máscaras sociais ("despersonalização"). A narradora dissolve as fronteiras racionais que a separavam da natureza bruta e reconhece-se como pura matéria viva.',
+                    trapAlert: 'Não leia o trecho de forma literal/biológica (A ou B). O vocabulário biológico ("protozoário, proteína") é usado como metáfora ontológica.'
+                },
+                options: [
+                    'repulsa sanitária imediata que reafirma a superioridade racional humana sobre os organismos inferiores.',
+                    'descrição naturalista e cientificista do comportamento entomológico no espaço urbano degradado.',
+                    'despersonalização do sujeito, que dissolve suas fronteiras identitárias racionais para confrontar a condição primordial da matéria viva.',
+                    'evasão onírica romântica em direção a uma natureza idealizada, livre das angústias da vida moderna.',
+                    'denúncia social direta acerca da insalubridade habitacional enfrentada pelas classes médias nas metrópoles.'
+                ],
+                correctIndex: 2,
+                correctExplanation: 'A epifania em "A Paixão Segundo G.H." consiste na desconstrução do "eu" civilizado e racional (despersonalização), levando a protagonista a fundir-se simbolicamente com a substância neutra e pré-humana da vida ("eu protozoário, proteína pura").',
+                optionExplanations: [
+                    '[Distrator: Contradição] Em vez de superioridade humana, a narradora nivela-se ao inseto e à condição de matéria viva bruta.',
+                    '[Distrator: Anacronismo Estético] A prosa de Clarice é existencialista e introspectiva (3ª fase modernista), oposta ao determinismo cientificista do Naturalismo.',
+                    '[Gabarito Oficial] Traduz com precisão o mergulho ontológico e a dissolução das fronteiras entre o humano racional e a vida orgânica primordial.',
+                    '[Distrator: Contradição] Não há idealização amena da natureza, mas um confronto visceral e perturbador com o inumano.',
+                    '[Distrator: Leitura Literal] O romance se passa no quarto de empregada de uma cobertura, mas o excerto trata de metafísica existencial, não de saúde pública.'
+                ]
+            },
+            {
+                id: 5,
+                area: 'linguagens',
+                areaShort: 'Linguagens',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C5 • H16',
+                difficulty: 'Médio',
+                topic: 'Lygia Fagundes Telles ("Seminário dos Ratos") e Alegoria Política',
+                context: `O Diretor das Classes Conservadoras e Desarmadas pigarreou na cabeceira da mesa do congresso: "Senhores, as medidas técnicas contra a praga estão sendo tomadas com rigor absoluto!". Nesse exato instante, ouviu-se um ruído surdo vindo do subsolo da mansão requisitada para o evento. Primeiro roeram os fios do telefone; depois invadiram a cozinha, os salões acarpetados e os gabinetes. Quando o Secretário abriu a porta, não havia mais como conter a multidão cinzenta que tomava posse de toda a estrutura do edifício.`,
+                source: 'TELLES, L. F. Seminário dos ratos. São Paulo: Companhia das Letras, 2009 (adaptado).',
+                command: 'No conto de Lygia Fagundes Telles, a irrupção do elemento insólito — a invasão incontrolável dos ratos durante uma reunião burocrática de autoridades — opera como uma alegoria que critica:',
+                howToSolve: {
+                    commandAsk: 'Identificar o alvo da crítica política por trás da cena fantástica dos ratos invadindo o congresso de autoridades.',
+                    keyClues: 'Contraste entre a retórica oficial pomposa ("medidas técnicas tomadas com rigor absoluto") e a invasão real que destrói a comunicação e toma o prédio a partir do subsolo.',
+                    stepByStep: 'No realismo fantástico/insólito de Lygia Fagundes Telles, o seminário burocrático simboliza um Estado tecnocrático alienado da realidade social, que se reúne em mansões luxuosas para produzir discursos vazios enquanto a crise real o engole.',
+                    trapAlert: 'Evite interpretações literais sobre arquitetura colonial (B) ou pesquisas biológicas de zoonoses (C).'
+                },
+                options: [
+                    'a inoperância e o distanciamento da burocracia estatal, cuja retórica tecnicista sucumbe diante das crises reais que tenta ocultar.',
+                    'a precariedade da arquitetura colonial brasileira frente à expansão demográfica desordenada do campo.',
+                    'a falta de investimentos internacionais em pesquisas laboratoriais voltadas ao controle biológico de pragas.',
+                    'o pessimismo existencialista diante da inevitável extinção biológica da espécie humana por causas naturais.',
+                    'a superioridade das forças rurais tradicionais sobre o processo de industrialização das metrópoles.'
+                ],
+                correctIndex: 0,
+                correctExplanation: 'O conto utiliza o insólito como sátira política: enquanto burocratas encastelados proferem discursos técnicos desconectados do país real, as mazelas estruturais (os ratos vindos do subsolo) corroem e tomam o próprio aparelho de poder.',
+                optionExplanations: [
+                    '[Gabarito Oficial] Captura a função alegórica do conto ao expor a alienação e a impotência da tecnoburocracia diante do colapso institucional.',
+                    '[Distrator: Literalidade] O edifício é palco simbólico do encastelamento político, não objeto de análise arquitetônica.',
+                    '[Distrator: Redução Literal] Tomar a praga apenas pelo viés biológico ignora toda a construção irônica dos cargos burocráticos citados no texto.',
+                    '[Distrator: Extrapolação] O foco da narrativa é sociopolítico e institucional, não uma tese sobre extinção natural da espécie.',
+                    '[Distrator: Invenção] Não há no texto qualquer embate entre agrarismo e industrialização.'
+                ]
+            },
+            {
+                id: 6,
+                area: 'linguagens',
+                areaShort: 'Linguagens',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C1 • H3',
+                difficulty: 'Médio',
+                topic: 'ECA Digital, Design Persuasivo e Economia da Atenção',
+                context: `O debate em torno da atualização normativa conhecida como "ECA Digital" parte do diagnóstico de que crianças e adolescentes deixaram de ser apenas receptores passivos de mídia para se tornarem produtores de dados e alvos de arquiteturas digitais baseadas em recompensas variáveis (rolagem infinita, notificações intermitentes e métricas de aprovação pública). Nesse ecossistema, o design persuasivo das plataformas busca maximizar o tempo de retenção da atenção juvenil para fins de monetização publicitária.`,
+                source: 'INSTITUTO ALANA. Direitos de crianças e adolescentes no ambiente digital. São Paulo, 2025 (adaptado).',
+                command: 'Considerando a função sociocomunicativa das tecnologias digitais descrita no texto, a necessidade de regulamentação protetiva justifica-se pelo fato de que a arquitetura dessas plataformas:',
+                howToSolve: {
+                    commandAsk: 'Apontar por que o design das redes sociais exige proteção legal específica para crianças e adolescentes segundo o texto.',
+                    keyClues: '"recompensas variáveis", "design persuasivo", "maximizar o tempo de retenção da atenção juvenil para fins de monetização publicitária".',
+                    stepByStep: 'O texto demonstra que a interface das redes não é neutra: ela aplica engenharia comportamental (rolagem infinita, curtidas) para capturar a atenção de sujeitos em desenvolvimento e convertê-la em lucro publicitário.',
+                    trapAlert: 'Cuidado com extrapolações: o texto trata da regulação do design abusivo e da coleta de dados, e não da substituição da autoridade familiar pelo Estado (C).'
+                },
+                options: [
+                    'impede o acesso de estudantes da rede pública a conteúdos pedagógicos e científicos gratuitos.',
+                    'opera por meio de mecanismos algorítmicos intencionais que exploram a vulnerabilidade cognitiva juvenil visando ao lucro.',
+                    'substitui integralmente a autoridade familiar pelo controle estatal direto sobre os dispositivos domésticos.',
+                    'elimina a produção cultural autoral dos jovens ao bloquear o compartilhamento de vídeos amadores.',
+                    'restringe a interação social contemporânea ao uso exclusivo de textos escritos em linguagem formal.'
+                ],
+                correctIndex: 1,
+                correctExplanation: 'A justificativa central para o "ECA Digital" reside na assimetria entre o design persuasivo das plataformas — programado para gerar retenção compulsiva e extração de dados comerciais — e a fase peculiar de desenvolvimento biopsicossocial de crianças e adolescentes.',
+                optionExplanations: [
+                    '[Distrator: Extrapolação] O texto não aborda bloqueio a sites educativos, mas a retenção de atenção em plataformas comerciais.',
+                    '[Gabarito Oficial] Sintetiza com exatidão a relação entre "design persuasivo", "recompensas variáveis" e "monetização publicitária" sobre o público infantojuvenil.',
+                    '[Distrator: Distorção Jurídica] A proteção integral prevista no ECA baseia-se no dever compartilhado entre família, sociedade, Estado e empresas.',
+                    '[Distrator: Contradição] O texto afirma explicitamente que os jovens atuam como produtores ativos de conteúdo e dados.',
+                    '[Distrator: Erro Factual] O ecossistema descrito baseia-se em linguagens multimodais e audiovisuais rápidas, não em textos formais.'
+                ]
+            },
+
+            // =========================================================================
+            // CIÊNCIAS HUMANAS E SUAS TECNOLOGIAS (Q07 - Q12)
+            // =========================================================================
+            {
+                id: 7,
+                area: 'humanas',
+                areaShort: 'Humanas',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C2 • H7',
+                difficulty: 'Médio',
+                topic: 'Terra Indígena Raposa Serra do Sol e Demarcação Contínua',
+                context: `A homologação da Terra Indígena Raposa Serra do Sol, em Roraima, consolidada pelo Supremo Tribunal Federal sob o modelo de demarcação em área contínua — e não em "ilhas" fragmentadas —, reconheceu a ocupação tradicional dos povos Macuxi, Wapichana, Ingarikó, Taurepang e Patamona. Para essas etnias, a integridade territorial entre as serras, os lavrados e as bacias hidrográficas é indissociável de sua reprodução física, cosmológica e ambiental.`,
+                source: 'ISA. Povos Indígenas no Brasil: Raposa Serra do Sol. Disponível em: https://pib.socioambiental.org. Acesso em: 10 maio 2026 (adaptado).',
+                command: 'Do ponto de vista socioespacial e jurídico-constitucional (Art. 231 da CF/1988), a defesa da demarcação contínua em oposição ao modelo de "ilhas" fundamenta-se na compreensão de que o território indígena:',
+                howToSolve: {
+                    commandAsk: 'Compreender por que a continuidade territorial é indispensável para os povos originários segundo a Geografia e a Constituição.',
+                    keyClues: '"integridade territorial entre as serras, os lavrados e as bacias hidrográficas é indissociável de sua reprodução física, cosmológica e ambiental".',
+                    stepByStep: 'Demarcar em "ilhas" confinaria as aldeias em pequenos lotes cercados por monoculturas e garimpos, inviabilizando o manejo ecológico integrado e os fluxos culturais entre as cinco etnias. O território contínuo garante o habitat integral previsto no Art. 231 da CF/88.',
+                    trapAlert: 'Fique atento ao distrator B: Terras Indígenas são bens da União sob posse permanente dos indígenas; elas jamais reduzem ou transferem a soberania nacional.'
+                },
+                options: [
+                    'constitui uma unidade socioecológica e simbólica integrada, indispensável à sobrevivência física e cultural dos povos originários.',
+                    'transfere a soberania política do Estado brasileiro para organismos internacionais de preservação florestal.',
+                    'destina-se prioritariamente ao loteamento individual de terras para a expansão da monocultura mecanizada.',
+                    'restringe a noção de terra tradicional apenas ao perímetro imediato das moradias e roças de subsistência.',
+                    'elimina a diversidade linguística entre as etnias locais ao impor uma administração municipal única.'
+                ],
+                correctIndex: 0,
+                correctExplanation: 'Para a Geografia Cultural e para o Art. 231 da Constituição de 1988, o território indígena abrange a totalidade ambiental, produtiva e cosmológica necessária à reprodução física e cultural de cada povo, exigindo continuidade espacial entre serras, rios e lavrados.',
+                optionExplanations: [
+                    '[Gabarito Oficial] Expressa a concepção constitucional e geográfica de territorialidade originária como totalidade socioambiental e simbólica.',
+                    '[Distrator: Senso Comum] As terras indígenas são patrimônio inalienável da União Federal e reforçam a proteção das fronteiras nacionais.',
+                    '[Distrator: Contradição] O usufruto indígena é coletivo e tradicional, vedando o loteamento privado para monoculturas.',
+                    '[Distrator: Contradição] Limitar a terra ao perímetro das malocas corresponde exatamente à tese das "ilhas", rejeitada pela decisão do STF.',
+                    '[Distrator: Erro Factual] A demarcação protege a coexistência plurilíngue dos povos Macuxi, Wapichana, Ingarikó, Taurepang e Patamona.'
+                ]
+            },
+            {
+                id: 8,
+                area: 'humanas',
+                areaShort: 'Humanas',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C6 • H27',
+                difficulty: 'Fácil',
+                topic: 'Agroecologia Urbana, Cisternas e Justiça Climática em Favelas',
+                context: `Na favela do Engenho da Rainha, na Zona Norte do Rio de Janeiro, moradores e coletivos comunitários implementaram sistemas de captação de água da chuva por meio de cisternas acopladas a hortas agroecológicas em áreas antes degradadas. Além de produzir alimentos livres de agrotóxicos para famílias chefiadas por mulheres negras, a iniciativa reduz o escoamento superficial durante tempestades de verão e ameniza os efeitos das ilhas de calor na periferia.`,
+                source: 'FIOCRUZ. Tecnologias sociais, agroecologia e saúde urbana nas periferias. Rio de Janeiro, 2025 (adaptado).',
+                command: 'A implementação dessa tecnologia social no espaço periférico metropolitano articula diretamente os conceitos de:',
+                howToSolve: {
+                    commandAsk: 'Conectar a produção local de alimentos saudáveis e a adaptação ambiental comunitária nas periferias aos conceitos geográficos correspondentes.',
+                    keyClues: '"alimentos livres de agrotóxicos para famílias chefiadas por mulheres negras" + "reduz o escoamento superficial... e ameniza ilhas de calor na periferia".',
+                    stepByStep: 'Some as duas dimensões do projeto: 1) produzir comida saudável no próprio território vulnerabilizado = Soberania e Segurança Alimentar; 2) mitigar enchentes e calor extremo onde a população periférica mais sofre = Justiça Climática.',
+                    trapAlert: 'Não confunda melhorias comunitárias autogestionadas com "gentrificação" (A), que é a expulsão imobiliária de moradores pobres.'
+                },
+                options: [
+                    'gentrificação urbana e terceirização privada dos serviços de abastecimento hídrico.',
+                    'soberania alimentar e justiça climática, fortalecendo a resiliência comunitária em territórios vulnerabilizados.',
+                    'êxodo urbano reverso e desindustrialização compulsória das regiões metropolitanas.',
+                    'monocultura de exportação e uso intensivo de insumos químicos sintéticos no solo urbano.',
+                    'isenção estatal definitiva quanto ao dever de universalizar o saneamento básico nas periferias.'
+                ],
+                correctIndex: 1,
+                correctExplanation: 'As tecnologias sociais descritas promovem simultaneamente a soberania alimentar (acesso autônomo a alimentos saudáveis sem agrotóxicos) e a justiça climática (adaptação de territórios periféricos historicamente mais afetados por eventos extremos e ilhas de calor).',
+                optionExplanations: [
+                    '[Distrator: Conceito Oposto] Gentrificação refere-se à valorização especulativa que expulsa a população local; o projeto descrito é comunitário e inclusivo.',
+                    '[Gabarito Oficial] Une com precisão a dimensão nutricional/social (soberania alimentar) à dimensão microclimática e ambiental urbana (justiça climática).',
+                    '[Distrator: Extrapolação] A agricultura urbana ocorre dentro da própria metrópole, sem envolver migração populacional para o campo.',
+                    '[Distrator: Contradição] O texto explicita que o cultivo é agroecológico, diversificado e livre de agrotóxicos.',
+                    '[Distrator: Distorção Política] A ação comunitária gera resiliência local, mas não exime o poder público do dever constitucional de prover saneamento.'
+                ]
+            },
+            {
+                id: 9,
+                area: 'humanas',
+                areaShort: 'Humanas',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C2 • H8',
+                difficulty: 'Médio',
+                topic: 'Geopolítica do Estreito de Ormuz e Segurança Energética',
+                context: `Localizado entre a costa do Irã, ao norte, e a Península de Musandam (Omã e Emirados Árabes Unidos), ao sul, o Estreito de Ormuz possui apenas cerca de 33 quilômetros de largura em seu ponto mais estreito. Por esse corredor marítimo transitam diariamente cerca de 20% a 25% de todo o petróleo comercializado por via marítima no planeta, além de grande parte do gás natural liquefeito (GNL) exportado pelo Catar para a Ásia e a Europa.`,
+                source: 'U.S. ENERGY INFORMATION ADMINISTRATION (EIA). World Oil Transit Chokepoints, 2025 (adaptado).',
+                command: 'Na geopolítica contemporânea, a recorrente tensão militar nessa passagem marítima explica-se pelo fato de o Estreito de Ormuz configurar um:',
+                howToSolve: {
+                    commandAsk: 'Definir a importância geoeconômica do Estreito de Ormuz a partir dos dados de fluxo energético.',
+                    keyClues: '"33 km de largura" + "transitam diariamente 20% a 25% de todo o petróleo comercializado por via marítima no planeta".',
+                    stepByStep: 'Na Geografia Política e Econômica, canais ou estreitos marítimos muito estreitos que concentram parcela crítica do comércio global são classificados como pontos de estrangulamento ("chokepoints"). Qualquer instabilidade ali afeta imediatamente o suprimento energético e a inflação global.',
+                    trapAlert: 'Atenção à Geografia Física na letra A: Ormuz é um estreito natural entre o Golfo Pérsico e o Golfo de Omã (quem liga o Mediterrâneo ao Mar Vermelho por obra humana é o Canal de Suez).'
+                },
+                options: [
+                    'canal artificial construído no século XIX para ligar diretamente o Mar Mediterrâneo ao Oceano Atlântico.',
+                    'ponto de estrangulamento logístico (chokepoint) cujo bloqueio impacta diretamente a matriz energética e a inflação global.',
+                    'território neutro desmilitarizado sob gestão exclusiva da Organização dos Países Exportadores de Petróleo (OPEP).',
+                    'corredor comercial secundário devido à completa substituição dos combustíveis fósseis na indústria asiática.',
+                    'espaço marítimo restrito ao transporte de produtos agrícolas entre os países da América Latina e da África.'
+                ],
+                correctIndex: 1,
+                correctExplanation: 'O Estreito de Ormuz é o mais sensível "chokepoint" (ponto de estrangulamento) marítimo energético do mundo: por ser a única saída marítima do Golfo Pérsico para o Oceano Índico, qualquer ameaça de fechamento provoca choques imediatos no preço global do barril de petróleo e do GNL.',
+                optionExplanations: [
+                    '[Distrator: Erro Cartográfico] Ormuz é uma passagem natural no Golfo Pérsico, e não um canal artificial mediterrâneo.',
+                    '[Gabarito Oficial] Conceitua corretamente o estreito como gargalo estratégico vital para a segurança energética e estabilidade macroeconômica mundial.',
+                    '[Distrator: Erro Geopolítico] A área possui intensa presença naval militar (Irã, EUA e monarquias do Golfo) e a OPEP não administra territórios marítimos.',
+                    '[Distrator: Contradição] O texto mostra que um quarto do petróleo marítimo mundial e grande parte do GNL destinado à Ásia passam pelo local.',
+                    '[Distrator: Erro Regional] Situa-se no Oriente Médio e sua relevância central decorre de hidrocarbonetos (petróleo e gás).'
+                ]
+            },
+            {
+                id: 10,
+                area: 'humanas',
+                areaShort: 'Humanas',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C4 • H19',
+                difficulty: 'Médio',
+                topic: 'Mulheres na Ciência (ONU), Segregação Horizontal e Teto de Vidro',
+                context: `Ao instituir o Dia Internacional das Mulheres e Meninas na Ciência (11 de fevereiro), a Organização das Nações Unidas (ONU) e a UNESCO chamaram atenção para dois fenômenos sociológicos persistentes nas áreas de Ciência, Tecnologia, Engenharia e Matemática (STEM): a "segregação horizontal" (concentração feminina em áreas associadas ao cuidado e sub-representação nas engenharias e computação) e o "teto de vidro" (barreiras invisíveis que dificultam a ascensão de pesquisadoras aos postos máximos de comando acadêmico e financiamento).`,
+                source: 'UNESCO. Decifrar o código: educação de meninas e mulheres em ciências, tecnologia, engenharia e matemática. Brasília, 2024 (adaptado).',
+                command: 'A persistência histórica das assimetrias descritas pela UNESCO no campo científico decorre fundamentalmente de:',
+                howToSolve: {
+                    commandAsk: 'Explicar sociologicamente por que existem a "segregação horizontal" e o "teto de vidro" para mulheres nas ciências exatas.',
+                    keyClues: '"concentração feminina em áreas associadas ao cuidado" + "barreiras invisíveis que dificultam a ascensão aos postos máximos".',
+                    stepByStep: 'Como o texto fala em "barreiras invisíveis" (não são leis proibitivas formais), a causa está na estrutura social: estereótipos de gênero que desde a infância associam exatas aos homens e cuidado às mulheres, somados à divisão sexual do trabalho doméstico que sobrecarrega a carreira das cientistas.',
+                    trapAlert: 'Descarte determinismos biológicos (A) ou afirmações de que há leis proibindo mulheres de entrar na universidade hoje (B).'
+                },
+                options: [
+                    'diferenças neurobiológicas inatas que direcionam os gêneros para habilidades cognitivas distintas.',
+                    'proibições jurídicas formais vigentes nas democracias ocidentais que vedam a matrícula feminina no ensino superior.',
+                    'estereótipos culturais de gênero e da divisão sexual do trabalho, que historicamente associaram a racionalidade técnica ao masculino e sobrecarregaram as mulheres com o trabalho reprodutivo.',
+                    'desinteresse espontâneo das jovens contemporâneas pelo uso de tecnologias digitais e redes de informação.',
+                    'excesso de financiamento público exclusivo para laboratórios chefiados por mulheres nas ciências exatas.'
+                ],
+                correctIndex: 2,
+                correctExplanation: 'A Sociologia da Ciência demonstra que tanto a segregação por área quanto o "teto de vidro" resultam da socialização de gênero (que codifica a técnica como masculina e o cuidado como feminino) e da sobrecarga feminina com o trabalho reprodutivo e doméstico não remunerado.',
+                optionExplanations: [
+                    '[Distrator: Determinismo Biológico] Pesquisas neurocientíficas e da própria UNESCO refutam qualquer aptidão cognitiva desigual inata entre gêneros.',
+                    '[Distrator: Anacronismo] Não há proibição legal nas democracias atuais; o conceito de "teto de vidro" refere-se justamente a barreiras institucionais e simbólicas invisíveis.',
+                    '[Gabarito Oficial] Articula os papéis sociais de gênero e a divisão sexual do trabalho como causas estruturais da desigualdade na carreira científica.',
+                    '[Distrator: Naturalização] O afastamento das áreas de STEM não é "espontâneo", mas socialmente produzido por vieses pedagógicos e culturais.',
+                    '[Distrator: Contradição] O texto-base aponta justamente a restrição de acesso das pesquisadoras às bolsas de produtividade de topo e chefias.'
+                ]
+            },
+            {
+                id: 11,
+                area: 'humanas',
+                areaShort: 'Humanas',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C1 • H1',
+                difficulty: 'Difícil',
+                topic: 'Cais do Valongo, Arqueologia da Diáspora e Memória Sensível',
+                context: `Durante quase dois séculos, o Cais do Valongo, na zona portuária do Rio de Janeiro, permaneceu soterrado por sucessivas reformas urbanísticas — primeiro transformado no "Cais da Imperatriz" em 1843 e, depois, aterrado no início do século XX. Descoberto por escavações arqueológicas em 2011 e reconhecido pela UNESCO como Patrimônio Mundial na categoria de "sítio de consciência e memória sensível", o local foi o principal porto de entrada de africanos escravizados nas Américas.`,
+                source: 'IPHAN. Dossiê de Candidatura do Sítio Arqueológico Cais do Valongo a Patrimônio Mundial. Brasília, 2017 (adaptado).',
+                command: 'A trajetória histórica do Cais do Valongo — do seu soterramento no século XIX à sua patrimonialização no século XXI — revela uma mudança na política de memória no Brasil, caracterizada pela passagem:',
+                howToSolve: {
+                    commandAsk: 'Contrastar o significado político de soterrar o cais no século XIX com o ato de escavá-lo e tombá-lo no século XXI.',
+                    keyClues: 'Século XIX/XX: "soterrado por sucessivas reformas". Século XXI: "escavações arqueológicas... sítio de consciência e memória sensível".',
+                    stepByStep: 'Encobrir o Cais do Valongo sob o "Cais da Imperatriz" fazia parte de um projeto de Estado que buscava apagar materialmente a mancha da escravidão e a presença africana. Já o tombamento atual como "sítio de memória sensível" assume o dever ético de expor o trauma histórico e honrar a ancestralidade afro-brasileira.',
+                    trapAlert: 'Um "sítio de memória sensível" nunca celebra o trauma (D), mas preserva os vestígios materiais para que a violência histórica não seja esquecida.'
+                },
+                options: [
+                    'do projeto de apagamento do passado escravocrata para o reconhecimento público do trauma histórico e da herança africana.',
+                    'da preservação monumental das elites coloniais para a demolição completa dos vestígios materiais do período imperial.',
+                    'da valorização estética do trabalho escravo para a exploração exclusivamente turística e mercadológica da zona portuária.',
+                    'do esquecimento espontâneo causado pela ação da natureza para a celebração nostálgica do sistema colonial.',
+                    'da historiografia crítica baseada em fontes arqueológicas para a narrativa oficial centrada apenas nos grandes líderes militares.'
+                ],
+                correctIndex: 0,
+                correctExplanation: 'A história material do Cais do Valongo sintetiza a transição de uma política urbanística de silenciamento e amnésia social (aterramento do cais escravista) para uma política pública de memória reparatória e patrimônio sensível.',
+                optionExplanations: [
+                    '[Gabarito Oficial] Identifica com rigor historiográfico a passagem do apagamento intencional para a valorização da memória da diáspora africana.',
+                    '[Distrator: Contradição] O sítio arqueológico preserva as diferentes camadas históricas expostas (inclusive a sobreposição imperial) como documento material.',
+                    '[Distrator: Desvio Conceitual] A chancela de "sítio de consciência" da UNESCO tem natureza ética, memorial e educativa, não meramente mercadológica.',
+                    '[Distrator: Duplo Erro] O soterramento não foi natural (foi reforma estatal deliberada) e o tombamento repudia o sistema colonial.',
+                    '[Distrator: Inversão] Ocorreu exatamente o oposto: a arqueologia permitiu superar a velha história oficial elitista.'
+                ]
+            },
+            {
+                id: 12,
+                area: 'humanas',
+                areaShort: 'Humanas',
+                badge: '1º Dia • ENEM 2026',
+                competence: 'C3 • H12',
+                difficulty: 'Fácil',
+                topic: 'Constituição de 1988, Direitos Sociais e Cidadania Democrática',
+                context: `Art. 6º São direitos sociais a educação, a saúde, a alimentação, o trabalho, a moradia, o transporte, o lazer, a segurança, a previdência social, a proteção à maternidade e à infância, a assistência aos desamparados, na forma desta Constituição. Elaborada no contexto da redemocratização brasileira após 21 anos de regime militar, a Constituição de 1988 contou com intensa participação de movimentos populares, sindicatos, comunidades indígenas e organizações civis por meio de emendas populares.`,
+                source: 'BRASIL. Constituição da República Federativa do Brasil de 1988. Brasília: Senado Federal, 2026.',
+                command: 'Ao consagrar os direitos listados no Artigo 6º como deveres do Estado, a "Constituição Cidadã" de 1988 adotou uma concepção política que:',
+                howToSolve: {
+                    commandAsk: 'Definir qual modelo de Estado e de cidadania está expresso no Artigo 6º da Constituição de 1988.',
+                    keyClues: '"direitos sociais: educação, saúde, alimentação, trabalho, moradia..." + "participação de movimentos populares".',
+                    stepByStep: 'Na Sociologia Política (T.H. Marshall), a cidadania plena exige não apenas direitos civis e políticos, mas Direitos Sociais. A CF/88 rompeu com o modelo anterior (onde saúde pública era restrita a quem tinha carteira assinada) e criou um modelo inspirado no Estado de Bem-Estar Social.',
+                    trapAlert: 'Elimine a opção A (que descreve a "cidadania regulada" da Era Vargas/Regime Militar, superada pelo SUS universal em 1988).'
+                },
+                options: [
+                    'restringe o exercício da cidadania plena aos trabalhadores formais contribuintes da previdência privada.',
+                    'transfere a garantia de saúde e educação básicas para a filantropia voluntária das instituições religiosas.',
+                    'articula a democracia representativa e participativa à promoção da dignidade humana por meio de políticas públicas de bem-estar social.',
+                    'subordina os direitos fundamentais individuais aos interesses de segurança nacional do Poder Executivo.',
+                    'institui o Estado mínimo absoluto, proibindo a intervenção governamental na oferta de serviços públicos essenciais.'
+                ],
+                correctIndex: 2,
+                correctExplanation: 'A Carta de 1988 consolidou a redemocratização brasileira ao combinar mecanismos de democracia representativa e participativa com um amplo rol de direitos sociais universais (como o SUS e o ensino público gratuito), vinculando cidadania à justiça social.',
+                optionExplanations: [
+                    '[Distrator: Anacronismo] A restrição de direitos sociais apenas a trabalhadores com carteira assinada ("cidadania regulada") foi superada pela universalização de 1988.',
+                    '[Distrator: Contradição] Direitos sociais constitucionais são deveres jurídicos do Estado e direitos subjetivos do cidadão, não caridade privada.',
+                    '[Gabarito Oficial] Sintetiza o pilar social-democrata e participativo da Constituição Cidadã de 1988.',
+                    '[Distrator: Anacronismo Histórico] A subordinação de garantias fundamentais à Doutrina de Segurança Nacional caracterizou o período autoritário anterior (1964-1985).',
+                    '[Distrator: Contradição] O Artigo 6º exige políticas públicas ativas do Estado na saúde, educação e assistência, opondo-se ao Estado mínimo absoluto.'
+                ]
+            },
+
+            // =========================================================================
+            // CIÊNCIAS DA NATUREZA E SUAS TECNOLOGIAS (Q13 - Q18)
+            // =========================================================================
+            {
+                id: 13,
+                area: 'natureza',
+                areaShort: 'Natureza',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C3 • H10',
+                difficulty: 'Fácil',
+                topic: 'Ecologia: Sucessão Ecológica, PPB, PPL e Sequestro de Carbono',
+                context: `Em um projeto de recuperação de uma área degradada da Mata Atlântica, biólogos monitoraram durante 40 anos as taxas de Produtividade Primária Bruta (PPB) — total de matéria orgânica produzida pela fotossíntese — e de Respiração da Comunidade (R). Nos primeiros 5 anos (estágio pioneiro e secundário inicial), observou-se que a PPB era muito superior ao consumo respiratório (PPB > R). Ao final de 40 anos, a floresta atingiu um estágio de estabilidade (clímax), no qual a taxa de fotossíntese igualou-se à respiração total da comunidade (PPB ≈ R).`,
+                source: 'ODUM, E. P. Ecologia. Rio de Janeiro: Guanabara Koogan, 2012 (adaptado).',
+                command: 'Com base na dinâmica energética da sucessão ecológica descrita, conclui-se que a comunidade vegetal atua como um sequestrador líquido de carbono atmosférico predominantemente no:',
+                howToSolve: {
+                    commandAsk: 'Determinar em qual fase da sucessão ecológica há saldo positivo (líquido) de retirada de CO₂ da atmosfera para formação de nova biomassa.',
+                    keyClues: 'Fórmula ecológica: PPL = PPB - R. Nos estágios iniciais/intermediários: PPB > R (logo PPL > 0). No clímax: PPB ≈ R (logo PPL ≈ 0).',
+                    stepByStep: 'A fotossíntese (PPB) retira CO₂ do ar; a respiração (R) devolve CO₂ para o ar. Para que a floresta tenha sequestro LÍQUIDO positivo e cresça em biomassa, a fotossíntese precisa superar a respiração (PPB > R), o que ocorre nas fases de crescimento (inicial e intermediária).',
+                    trapAlert: 'Pegadinha clássica: no estágio clímax a floresta tem o maior ESTOQUE acumulado de carbono nos troncos, mas a taxa de Produtividade Primária Líquida (PPL) tende a zero porque PPB = R!'
+                },
+                options: [
+                    'estágio clímax, pois a igualdade entre fotossíntese e respiração maximiza a Produtividade Primária Líquida (PPL).',
+                    'estágio inicial e intermediário, pois a Produtividade Primária Bruta supera a respiração (PPB > R), gerando acúmulo líquido de biomassa.',
+                    'estágio clímax, uma vez que árvores adultas deixam de realizar respiração celular aeróbica durante a noite.',
+                    'estágio pioneiro, porque as gramíneas e liquens possuem maior biomassa total acumulada do que uma floresta tropical madura.',
+                    'período noturno de qualquer estágio sucessional, quando a taxa de fixação de carbono atinge seu valor máximo.'
+                ],
+                correctIndex: 1,
+                correctExplanation: 'A Produtividade Primária Líquida é dada por PPL = PPB - R. Nas etapas inicial e intermediária da sucessão, como PPB > R, há saldo líquido positivo de fixação de carbono, convertido em incremento de biomassa vegetal.',
+                optionExplanations: [
+                    '[Distrator: Erro na Equação PPL] Se PPB = R no clímax, então PPL = PPB - R = 0 (equilíbrio dinâmico, e não PPL máxima).',
+                    '[Gabarito Oficial] Enquanto a mata está em crescimento (PPB > R), a taxa de assimilação fotossintética supera a perda respiratória, sequestrando carbono líquido.',
+                    '[Distrator: Erro Fisiológico] Vegetais vivos realizam respiração celular aeróbica ininterruptamente (dia e noite) em todas as fases da vida.',
+                    '[Distrator: Confusão Taxa vs. Estoque] O estágio pioneiro tem alta taxa de produtividade líquida (PPL), mas sua biomassa total estocada é muito inferior à de uma floresta clímax.',
+                    '[Distrator: Erro Bioquímico] A fixação fotossintética de carbono depende de ATP e NADPH gerados na fase clara (dependente de luz).'
+                ]
+            },
+            {
+                id: 14,
+                area: 'natureza',
+                areaShort: 'Natureza',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C2 • H6',
+                difficulty: 'Médio',
+                topic: 'Física: Eletrodinâmica, Ligações em Paralelo e Disjuntores',
+                context: `Em uma residência alimentada por uma rede elétrica de tensão constante igual a 220 V, um morador deseja instalar na cozinha três aparelhos ligados em paralelo a um mesmo circuito protegido por um único disjuntor: 1 Torneira elétrica gourmet (potência nominal de 4 400 W); 1 Forno micro-ondas (potência nominal de 1 320 W); e 1 Fritadeira elétrica Air Fryer (potência nominal de 1 980 W). Para garantir a segurança da instalação quando os três aparelhos funcionarem simultaneamente em potência máxima, o eletricista deve escolher um disjuntor cuja corrente máxima suportada seja ligeiramente superior à corrente total do circuito.`,
+                source: 'ABNT. NBR 5410: Instalações elétricas de baixa tensão. Rio de Janeiro, 2024 (adaptado).',
+                command: 'Nessas condições, a corrente elétrica total exigida pelos três aparelhos em funcionamento simultâneo e o disjuntor comercial mais adequado (dentre os padrões de 15 A, 25 A, 32 A, 40 A e 60 A) são, respectivamente:',
+                howToSolve: {
+                    commandAsk: 'Calcular a corrente elétrica total (i) dos três equipamentos ligados juntos em 220 V e selecionar o disjuntor comercial imediatamente acima desse valor.',
+                    keyClues: 'U = 220 V | P₁ = 4400 W | P₂ = 1320 W | P₃ = 1980 W | Relação: P = U · i.',
+                    stepByStep: '1) Some as potências em paralelo: P_total = 4400 + 1320 + 1980 = 7700 W. 2) Calcule a corrente total: i = P_total / U = 7700 / 220 = 35 A. 3) Escolha o disjuntor comercial logo acima de 35 A: 40 A.',
+                    trapAlert: 'Se você escolher o disjuntor de 32 A (opção C), ele desarmará sempre que os três aparelhos forem ligados juntos, pois 32 A < 35 A!'
+                },
+                options: [
+                    '20 A e disjuntor de 25 A.',
+                    '28 A e disjuntor de 32 A.',
+                    '35 A e disjuntor de 32 A.',
+                    '35 A e disjuntor de 40 A.',
+                    '70 A e disjuntor de 60 A.'
+                ],
+                correctIndex: 3,
+                correctExplanation: 'Em uma associação em paralelo, a potência total dissipada é a soma das potências individuais: P = 4400 + 1320 + 1980 = 7700 W. Como P = U · i, temos i = 7700 / 220 = 35 A. O disjuntor deve suportar no mínimo 35 A com pequena folga de segurança, sendo o padrão de 40 A o único adequado.',
+                optionExplanations: [
+                    '[Distrator: Cálculo Parcial] Considerou apenas a corrente da torneira elétrica isolada (4400 W / 220 V = 20 A).',
+                    '[Distrator: Soma Incompleta] Somou apenas dois dos três aparelhos do circuito.',
+                    '[Distrator: Falha de Dimensionamento] Calculou corretamente a corrente (35 A), mas selecionou um disjuntor inferior (32 A), que interromperia o circuito.',
+                    '[Gabarito Oficial] Corrente total i = 7700 / 220 = 35 A e proteção pelo disjuntor comercial imediatamente superior (40 A).',
+                    '[Distrator: Tensão Incorreta] Dividiu a potência total por 110 V (7700 / 110 = 70 A) em vez dos 220 V especificados.'
+                ]
+            },
+            {
+                id: 15,
+                area: 'natureza',
+                areaShort: 'Natureza',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C7 • H24',
+                difficulty: 'Médio',
+                topic: 'Química: Eletroquímica e Baterias de Íons de Lítio',
+                context: `As baterias recarregáveis de íons de lítio, amplamente utilizadas em veículos elétricos e smartphones, operam com base na migração de íons Li⁺ entre um eletrodo de grafite e um eletrodo de óxido metálico (como LiCoO₂). Considere as semirreações padrão de redução a 25 °C: Semirreação I: Li⁺ + e⁻ → Li(s) (E°red = -3,04 V) | Semirreação II: CoO₂ + Li⁺ + e⁻ → LiCoO₂(s) (E°red = +1,00 V).`,
+                source: 'ATKINS, P.; JONES, L. Princípios de Química. Porto Alegre: Bookman, 2018 (adaptado).',
+                command: 'Durante o processo de DESCARGA (funcionamento espontâneo) dessa célula eletroquímica, a espécie química que sofre oxidação no ânodo e a diferença de potencial padrão (ΔE°) gerada pela bateria são, respectivamente:',
+                howToSolve: {
+                    commandAsk: 'Determinar qual espécie sofre oxidação no ânodo durante a descarga espontânea e calcular a ddp (ΔE°) da bateria.',
+                    keyClues: 'E°red(I) = -3,04 V (menor potencial → oxida no ânodo) | E°red(II) = +1,00 V (maior potencial → reduz no cátodo).',
+                    stepByStep: '1) Quem tem o menor potencial de redução (-3,04 V) inverte a reação e sofre oxidação: o Li(s) sólido passa a Li⁺ + e⁻. 2) Calcule ΔE° = E°maior - E°menor = (+1,00) - (-3,04) = +1,00 + 3,04 = +4,04 V.',
+                    trapAlert: 'Atenção redobrada ao sinal negativo na fórmula: +1,00 - (-3,04) resulta em +4,04 V, e não +2,04 V (opção A)!'
+                },
+                options: [
+                    'Li(s) e +2,04 V.',
+                    'Li(s) e +4,04 V.',
+                    'CoO₂ e +4,04 V.',
+                    'Li⁺ e -2,04 V.',
+                    'LiCoO₂ e +1,00 V.'
+                ],
+                correctIndex: 1,
+                correctExplanation: 'Na descarga espontânea (etapa galvânica), o eletrodo de menor potencial de redução (-3,04 V) atua como ânodo, oxidando o lítio metálico Li(s) a Li⁺. A força eletromotriz é ΔE° = E°(cátodo) - E°(ânodo) = (+1,00) - (-3,04) = +4,04 V.',
+                optionExplanations: [
+                    '[Distrator: Erro Algébrico de Sinal] Identificou corretamente o Li(s), mas subtraiu os módulos (3,04 - 1,00 = 2,04 V) esquecendo que -(-3,04) é positivo.',
+                    '[Gabarito Oficial] Oxidação anódica do Li(s) e ddp padrão igual a +1,00 - (-3,04) = +4,04 V.',
+                    '[Distrator: Inversão de Polos] O CoO₂ apresenta o maior potencial de redução (+1,00 V), sofrendo redução no cátodo.',
+                    '[Distrator: Erro de Nox e Espontaneidade] O cátion Li⁺ já está oxidado e toda pilha em descarga espontânea possui ΔE° > 0.',
+                    '[Distrator: Leitura Parcial] Considerou apenas o potencial isolado da segunda semirreação.'
+                ]
+            },
+            {
+                id: 16,
+                area: 'natureza',
+                areaShort: 'Natureza',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C4 • H14',
+                difficulty: 'Fácil',
+                topic: 'Biologia: Imunologia, Vacinas vs. Soros Hiperimunes no SUS',
+                context: `O Programa Nacional de Imunizações (PNI) do Sistema Único de Saúde (SUS) disponibiliza gratuitamente tanto vacinas (como as contra a dengue, o HPV e a covid-19) quanto soros hiperimunes (como o soro antiofídico, aplicado em vítimas de picadas de serpentes peçonhentas). Embora ambos sejam agentes imunobiológicos essenciais à saúde coletiva, seus mecanismos de ação no sistema imunológico humano são distintos.`,
+                source: 'BRASIL. Ministério da Saúde. Manual dos Centros de Referência para Imunobiológicos Especiais. Brasília, 2025 (adaptado).',
+                command: 'A diferença fundamental entre a atuação fisiológica da vacina e a do soro hiperimune reside no fato de que a vacina:',
+                howToSolve: {
+                    commandAsk: 'Distinguir o mecanismo imunológico ativo da vacina em relação à ação passiva do soro.',
+                    keyClues: 'Vacina = preventiva (introduz antígenos → gera memória). Soro = curativo/emergencial (entrega anticorpos prontos → sem memória).',
+                    stepByStep: 'A vacina sensibiliza o sistema imune do próprio indivíduo por meio de antígenos (atenuados, inativados ou via RNAm), ativando linfócitos B e T e gerando células de memória (imunização ativa).',
+                    trapAlert: 'Não inverta os conceitos: quem fornece anticorpos prontos de ação imediata é o SORO (opção A).'
+                },
+                options: [
+                    'fornece anticorpos prontos de ação imediata para neutralizar toxinas circulantes em casos de emergência médica.',
+                    'promove a imunização ativa ao introduzir ou codificar antígenos que estimulam a produção de células de memória imunológica.',
+                    'induz a imunização passiva temporária, dispensando a participação dos linfócitos B e T do próprio paciente.',
+                    'atua como antibiótico bactericida de amplo espectro, destruindo diretamente a parede celular de vírus e serpentes.',
+                    'possui efeito exclusivamente curativo após o agravamento dos sintomas clínicos, sem finalidade profilática.'
+                ],
+                correctIndex: 1,
+                correctExplanation: 'As vacinas operam por imunização ativa: apresentam antígenos (ou instruções genéticas para produzi-los) ao sistema imune, desencadeando resposta primária e diferenciação de linfócitos B e T de memória, o que garante proteção profilática duradoura.',
+                optionExplanations: [
+                    '[Distrator: Inversão Conceitual] A transferência de anticorpos prontos para neutralização imediata de peçonhas ou toxinas é a função do soro hiperimune.',
+                    '[Gabarito Oficial] Caracteriza com exatidão a imunização ativa induzida por antígenos e a formação de memória imunológica.',
+                    '[Distrator: Inversão Conceitual] Imunização passiva sem geração de memória é o mecanismo fisiológico do soro.',
+                    '[Distrator: Erro Microbiológico] Vacinas não são antibióticos, e vírus são partículas acelulares desprovidas de parede celular bacteriana.',
+                    '[Distrator: Contradição] A vacinação é essencialmente profilática (preventiva).'
+                ]
+            },
+            {
+                id: 17,
+                area: 'natureza',
+                areaShort: 'Natureza',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C5 • H17',
+                difficulty: 'Difícil',
+                topic: 'Química: Estequiometria com Grau de Pureza no Tratamento de Efluentes',
+                context: `Em uma estação de tratamento de efluentes industriais, utiliza-se calcário agrícola contendo 80% de pureza em carbonato de cálcio (CaCO₃) para neutralizar um tanque contendo ácido clorídrico (HCl) residual, conforme a equação química balanceada: CaCO₃(s) + 2 HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g). Dados: Massas molares em g/mol: H = 1; C = 12; O = 16; Cl = 35,5; Ca = 40. Volume molar de gás nas condições do processo = 25 L/mol.`,
+                source: 'BROWN, T. L. et al. Química: a ciência central. São Paulo: Pearson, 2016 (adaptado).',
+                command: 'Ao se adicionar 500 kg desse calcário (com 80% de pureza) a um tanque com excesso de ácido clorídrico, o volume máximo de gás carbônico (CO₂) liberado na reação completa será de:',
+                howToSolve: {
+                    commandAsk: 'Calcular o volume em litros de CO₂ produzido por 500 kg de calcário com 80% de pureza.',
+                    keyClues: 'Massa total = 500 kg | Pureza = 80% | Massa Molar CaCO₃ = 40 + 12 + 48 = 100 g/mol | Proporção 1:1 | Volume molar = 25 L/mol.',
+                    stepByStep: '1) Calcule a massa pura de CaCO₃: 80% de 500 kg = 400 kg = 400.000 g. 2) Converta em mols: n = 400.000 g / 100 g/mol = 4.000 mols de CaCO₃. 3) Pela proporção 1:1, formam-se 4.000 mols de CO₂. 4) Volume = 4.000 mols × 25 L/mol = 100.000 L.',
+                    trapAlert: 'Se você esquecer de descontar os 20% de impurezas, usará 500 kg e encontrará 125.000 L (distrator E)!'
+                },
+                options: [
+                    '10 000 L.',
+                    '25 000 L.',
+                    '80 000 L.',
+                    '100 000 L.',
+                    '125 000 L.'
+                ],
+                correctIndex: 3,
+                correctExplanation: 'Apenas a fração pura de CaCO₃ reage: 0,80 × 500 kg = 400 kg = 400.000 g. Dividindo pela massa molar do CaCO₃ (100 g/mol), obtêm-se 4.000 mols de CaCO₃, que geram 4.000 mols de CO₂. Multiplicando pelo volume molar (25 L/mol), liberam-se 100.000 L de gás.',
+                optionExplanations: [
+                    '[Distrator: Erro de Conversão de Unidade] Errou por um fator de 10 na passagem de quilogramas para gramas.',
+                    '[Distrator: Cálculo Parcial] Considerou apenas 1.000 mols de reagente na multiplicação pelo volume molar.',
+                    '[Distrator: Confusão Numérica] Multiplicou o percentual de pureza (80) diretamente por 1.000 sem aplicar o volume molar de 25 L/mol.',
+                    '[Gabarito Oficial] 400.000 g / 100 g/mol = 4.000 mols × 25 L/mol = 100.000 L.',
+                    '[Distrator: Omissão da Pureza] Calculou sobre a massa bruta de 500 kg (5.000 mols × 25 L/mol = 125.000 L) sem descontar as impurezas.'
+                ]
+            },
+            {
+                id: 18,
+                area: 'natureza',
+                areaShort: 'Natureza',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C6 • H20',
+                difficulty: 'Médio',
+                topic: 'Física Térmica: Calorimetria e Circulação por Convecção em Coletores Solares',
+                context: `Um coletor solar residencial plano recebe radiação solar e a utiliza para aquecer 200 litros de água armazenados em um reservatório térmico (boiler) inicialmente a 20 °C. Após um período de insolação, a água do reservatório atinge a temperatura final de 50 °C. Dados: Densidade da água = 1,0 kg/L; Calor específico sensível da água (c) = 4,2 kJ/(kg·°C). Despreze as perdas térmicas do reservatório para o ambiente.`,
+                source: 'HALLIDAY, D.; RESNICK, R. Fundamentos de Física: Gravitação, Ondas e Termodinâmica. Rio de Janeiro: LTC, 2016 (adaptado).',
+                command: 'A quantidade total de energia térmica (em megajoules, MJ) absorvida pela água nesse processo e o fenômeno físico responsável pela circulação natural da água entre as placas coletoras (inferiores) e o reservatório (superior) são, respectivamente:',
+                howToSolve: {
+                    commandAsk: 'Calcular o calor sensível Q = m·c·ΔT em megajoules (MJ) e nomear o processo termodinâmico que faz a água circular entre a placa e o boiler.',
+                    keyClues: 'm = 200 L = 200 kg | c = 4,2 kJ/(kg·°C) | ΔT = 50 - 20 = 30 °C | 1 MJ = 1.000 kJ.',
+                    stepByStep: '1) Q = 200 × 4,2 × 30 = 6.000 × 4,2 = 25.200 kJ. 2) Convertendo para megajoules: 25.200 / 1.000 = 25,2 MJ. 3) A água aquecida na placa fica menos densa e sobe para o boiler superior, enquanto a água fria (mais densa) desce: isso é Convecção Térmica.',
+                    trapAlert: 'Não marque "irradiação" na segunda parte (opção C): a energia chega do Sol à Terra por irradiação, mas a circulação da água líquida dentro da tubulação ocorre por convecção!'
+                },
+                options: [
+                    '16,8 MJ e condução térmica.',
+                    '25,2 MJ e convecção térmica.',
+                    '25,2 MJ e irradiação eletromagnética.',
+                    '42,0 MJ e convecção térmica.',
+                    '252,0 MJ e condução térmica.'
+                ],
+                correctIndex: 1,
+                correctExplanation: 'Pela equação fundamental da calorimetria (Q = m·c·ΔT), temos Q = 200 kg × 4,2 kJ/(kg·°C) × (50 - 20) °C = 25.200 kJ = 25,2 MJ. O escoamento natural (termossifão) da água entre as placas inferiores e o boiler superior deve-se à diferença de densidade do fluido aquecido, caracterizando a convecção térmica.',
+                optionExplanations: [
+                    '[Distrator: Erro em ΔT] Utilizou ΔT = 20 °C em vez da variação real de 30 °C e trocou convecção por condução.',
+                    '[Gabarito Oficial] Energia térmica de 25,2 MJ e circulação hidrodinâmica por correntes de convecção.',
+                    '[Distrator: Confusão de Fenômenos] Acertou o cálculo (25,2 MJ), mas confundiu a propagação da luz solar no espaço (irradiação) com o movimento da água nos tubos (convecção).',
+                    '[Distrator: Uso da Temperatura Final] Multiplicou pela temperatura final (50 °C) em vez de ΔT = 30 °C.',
+                    '[Distrator: Conversão de Prefixo] Errou a divisão por 1.000 ao converter quilojoules (kJ) para megajoules (MJ).'
+                ]
+            },
+
+            // =========================================================================
+            // MATEMÁTICA E SUAS TECNOLOGIAS (Q19 - Q24)
+            // =========================================================================
+            {
+                id: 19,
+                area: 'matematica',
+                areaShort: 'Matemática',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C3 • H11',
+                difficulty: 'Fácil',
+                topic: 'Geometria e Proporcionalidade: Escala Linear vs. Escala Volumétrica',
+                context: `Para apresentar um projeto de captação de águas pluviais em uma feira de ciências, uma equipe de estudantes construiu uma maquete na escala linear de 1 : 50. Na maquete, o reservatório principal possui formato cilíndrico e comporta exatamente 2 litros de água quando totalmente cheio.`,
+                source: 'INEP. Matriz de Referência de Matemática e suas Tecnologias. Brasília, 2026 (inédito).',
+                command: 'Mantendo-se rigorosamente as proporções geométricas da maquete, a capacidade total do reservatório real construído na escola, em milhares de litros (ou metros cúbicos), será igual a:',
+                howToSolve: {
+                    commandAsk: 'Determinar o volume real do reservatório a partir do volume da maquete (2 L) e da escala linear (1:50).',
+                    keyClues: 'Escala linear k = 50 | Volume na maquete = 2 L | Relação volumétrica: V_real / V_maquete = k³.',
+                    stepByStep: '1) Como o volume é uma grandeza tridimensional (comprimento × largura × altura), a razão linear (50) deve ser elevada ao cubo: k³ = 50³ = 125.000. 2) Multiplique pelo volume da maquete: V_real = 2 L × 125.000 = 250.000 litros = 250 mil litros.',
+                    trapAlert: 'Nunca multiplique volumes diretamente pela escala linear (2 × 50 = 100 L) nem pela escala de área (2 × 50² = 5.000 L)!'
+                },
+                options: [
+                    '0,1 mil litros (100 L).',
+                    '5 mil litros (5 000 L).',
+                    '125 mil litros (125 000 L).',
+                    '250 mil litros (250 000 L).',
+                    '500 mil litros (500 000 L).'
+                ],
+                correctIndex: 3,
+                correctExplanation: 'A razão entre volumes de sólidos semelhantes é igual ao cubo da razão de semelhança linear (k³). Assim, V_real = V_maquete × 50³ = 2 × 125.000 = 250.000 L, o que corresponde a 250 mil litros (ou 250 m³).',
+                optionExplanations: [
+                    '[Distrator: Escala Linear] Multiplicou o volume apenas por 50¹ (2 × 50 = 100 L), ignorando as três dimensões espaciais.',
+                    '[Distrator: Escala Superficial] Multiplicou o volume por 50² = 2.500 (2 × 2.500 = 5.000 L), aplicando fator de área.',
+                    '[Distrator: Omissão do Volume Base] Calculou 50³ = 125.000, mas esqueceu de multiplicar pelos 2 litros da maquete.',
+                    '[Gabarito Oficial] V_real = 2 L × 50³ = 2 × 125.000 = 250.000 L (250 mil litros).',
+                    '[Distrator: Erro Aritmético] Multiplicou 125.000 por 4 em vez de 2.'
+                ]
+            },
+            {
+                id: 20,
+                area: 'matematica',
+                areaShort: 'Matemática',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C7 • H28',
+                difficulty: 'Fácil',
+                topic: 'Estatística: Média, Mediana e Moda em Séries Temporais',
+                context: `Um estudante que se prepara para o ENEM 2026 registrou o número de questões resolvidas por dia ao longo de 10 dias consecutivos de revisão: Dia 1: 20 | Dia 2: 35 | Dia 3: 25 | Dia 4: 20 | Dia 5: 40 | Dia 6: 30 | Dia 7: 20 | Dia 8: 45 | Dia 9: 25 | Dia 10: 40.`,
+                source: 'Dados de monitoramento de estudos, 2026.',
+                command: 'Para avaliar sua regularidade, o estudante calculou a média aritmética, a mediana e a moda do número diário de questões resolvidas. Os valores encontrados para a MÉDIA, a MEDIANA e a MODA foram, respectivamente:',
+                howToSolve: {
+                    commandAsk: 'Calcular a Média, a Mediana e a Moda dos 10 valores apresentados.',
+                    keyClues: 'Lista bruta: 20, 35, 25, 20, 40, 30, 20, 45, 25, 40 (N = 10 dias, quantidade par).',
+                    stepByStep: '1) Ordene os dados em rol crescente: [20, 20, 20, 25, 25, 30, 35, 40, 40, 45]. 2) Média: soma = 300 → 300 / 10 = 30. 3) Mediana (média do 5º e 6º termos ordenados): (25 + 30) / 2 = 27,5. 4) Moda (valor mais frequente): 20 (aparece 3 vezes).',
+                    trapAlert: 'Se você não ordenar a lista antes de achar a mediana, pegará os termos centrais da tabela original (40 e 30) e marcará 35 (distrator C)!'
+                },
+                options: [
+                    '30; 27,5 e 20.',
+                    '27,5; 30 e 20.',
+                    '30; 35 e 20.',
+                    '30; 27,5 e 40.',
+                    '28; 25 e 20.'
+                ],
+                correctIndex: 0,
+                correctExplanation: 'Colocando os 10 valores em ordem crescente (20, 20, 20, 25, 25, 30, 35, 40, 40, 45): a soma é 300, logo a Média = 300/10 = 30; os termos centrais (5º e 6º) são 25 e 30, logo a Mediana = (25+30)/2 = 27,5; e o termo de maior frequência é a Moda = 20 (três ocorrências).',
+                optionExplanations: [
+                    '[Gabarito Oficial] Média = 30; Mediana = 27,5; Moda = 20.',
+                    '[Distrator: Ordem Invertida] Trocou a posição da Média com a da Mediana na resposta.',
+                    '[Distrator: Mediana sem Ordenação] Calculou a média do 5º e 6º dias diretamente da sequência desordenada (40 e 30 → 35).',
+                    '[Distrator: Erro na Moda] O número 40 repete-se apenas duas vezes, enquanto o 20 repete-se três vezes.',
+                    '[Distrator: Erro de Soma] Calculou incorretamente o somatório total dos 10 dias.'
+                ]
+            },
+            {
+                id: 21,
+                area: 'matematica',
+                areaShort: 'Matemática',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C5 • H21',
+                difficulty: 'Médio',
+                topic: 'Função Quadrática: Otimização de Receita Máxima (Vértice)',
+                context: `Uma cooperativa comunitária vende ingressos para um festival cultural beneficente. Atualmente, cobrando R$ 20,00 por ingresso, o evento atrai 600 pessoas. Uma pesquisa de mercado revelou que, para cada R$ 1,00 de aumento no preço do ingresso, o público diminui em 15 pagantes. A diretoria deseja definir o novo preço do ingresso de modo a obter a arrecadação financeira máxima (receita máxima) possível.`,
+                source: 'IEZZI, G. Fundamentos de Matemática Elementar: Conjuntos e Funções. São Paulo: Atual, 2019 (adaptado).',
+                command: 'Para que a cooperativa alcance a receita máxima nesse evento, o valor cobrado por cada ingresso deverá ser de:',
+                howToSolve: {
+                    commandAsk: 'Determinar o preço ótimo do ingresso que maximiza a função Receita = Preço × Público.',
+                    keyClues: 'Seja x o número de aumentos de R$ 1,00: Preço(x) = 20 + x | Público(x) = 600 - 15x.',
+                    stepByStep: '1) R(x) = (20 + x)(600 - 15x). 2) Ache as raízes igualando cada fator a zero: x₁ = -20 e x₂ = 600/15 = 40. 3) O x do vértice é a média das raízes: x_v = (-20 + 40)/2 = 10 aumentos. 4) Some ao preço inicial: Preço = 20 + 10 = R$ 30,00.',
+                    trapAlert: 'x_v = 10 é o valor do AUMENTO (R$ 10,00), mas o comando pede o PREÇO FINAL do ingresso (20 + 10 = R$ 30,00). Não pare na metade marcando a letra A!'
+                },
+                options: [
+                    'R$ 10,00.',
+                    'R$ 25,00.',
+                    'R$ 30,00.',
+                    'R$ 35,00.',
+                    'R$ 40,00.'
+                ],
+                correctIndex: 2,
+                correctExplanation: 'A função receita é R(x) = (20 + x)(600 - 15x), cujas raízes são x₁ = -20 e x₂ = 40. Pela simetria da parábola, o ponto de máximo ocorre em x_v = (-20 + 40)/2 = 10. Portanto, o novo preço do ingresso deve ser 20 + 10 = R$ 30,00.',
+                optionExplanations: [
+                    '[Distrator: Parada no Xv] Encontrou corretamente x_v = 10 (o acréscimo em reais), mas esqueceu de somá-lo aos R$ 20,00 iniciais.',
+                    '[Distrator: Chute Intuitivo] Valor intermediário sem embasamento no vértice da função quadrática.',
+                    '[Gabarito Oficial] Preço ótimo igual a 20 + x_v = 20 + 10 = R$ 30,00 (gerando receita máxima de R$ 13.500,00).',
+                    '[Distrator: Erro Aritmético] Errou o cálculo da segunda raiz (600 / 15).',
+                    '[Distrator: Raiz Nula] 40 é a raiz x₂ que zera o público pagante (600 - 15×40 = 0).'
+                ]
+            },
+            {
+                id: 22,
+                area: 'matematica',
+                areaShort: 'Matemática',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C2 • H8',
+                difficulty: 'Médio',
+                topic: 'Geometria Espacial: Conservação de Volume entre Cilindros',
+                context: `Em uma fazenda agroecológica, a água captada da chuva está armazenada até a metade da altura de um reservatório cilíndrico vertical A, que possui raio da base R_A = 2 m e altura total H_A = 6 m. Por necessidade de manutenção, toda a água contida no reservatório A será bombeada para um segundo reservatório cilíndrico vertical B, inicialmente vazio, cujo raio da base mede R_B = 3 m.`,
+                source: 'DOLCE, O.; POMPEO, J. N. Fundamentos de Matemática Elementar: Geometria Espacial. São Paulo: Atual, 2018 (adaptado).',
+                command: 'Sabendo que não houve desperdício de água na transferência e que o reservatório B é suficientemente alto, a altura atingida pela coluna de água dentro do reservatório B será aproximadamente igual a:',
+                howToSolve: {
+                    commandAsk: 'Calcular a altura h_B da coluna de água no cilindro B (raio 3 m) ao receber o volume que ocupava metade do cilindro A (raio 2 m, altura total 6 m).',
+                    keyClues: 'V_cilindro = π · R² · h | Em A: R_A = 2 m e h_água = 6/2 = 3 m | Em B: R_B = 3 m.',
+                    stepByStep: '1) Iguale os volumes: π · (R_A)² · h_A = π · (R_B)² · h_B. 2) Simplifique o π e substitua: 2² · 3 = 3² · h_B → 4 · 3 = 9 · h_B. 3) h_B = 12 / 9 = 4 / 3 ≈ 1,33 m.',
+                    trapAlert: 'Não esqueça que a água ocupava apenas METADE da altura de A (3 m, e não 6 m) e que o raio entra ao QUADRADO na fórmula!'
+                },
+                options: [
+                    '1,33 m.',
+                    '2,00 m.',
+                    '2,67 m.',
+                    '4,00 m.',
+                    '4,50 m.'
+                ],
+                correctIndex: 0,
+                correctExplanation: 'O volume inicial de água no cilindro A (com h_A = 3 m) é V = π · 2² · 3 = 12π m³. Transferindo esse volume para o cilindro B (R_B = 3 m), temos 12π = π · 3² · h_B ⇒ 9 · h_B = 12 ⇒ h_B = 12/9 = 4/3 ≈ 1,33 m.',
+                optionExplanations: [
+                    '[Gabarito Oficial] Igualando os volumes: (4 × 3) / 9 = 12 / 9 ≈ 1,33 m.',
+                    '[Distrator: Raio Linear] Não elevou os raios ao quadrado, fazendo 2 × 3 = 3 × h_B ⇒ h_B = 2,00 m.',
+                    '[Distrator: Altura Total] Utilizou a altura total do tanque A (6 m) em vez da metade preenchida (3 m), obtendo 24/9 ≈ 2,67 m.',
+                    '[Distrator: Proporção Direta] Inverteu a relação entre área da base e altura.',
+                    '[Distrator: Proporção Linear Direta] Multiplicou 3 m por (3/2) = 4,50 m.'
+                ]
+            },
+            {
+                id: 23,
+                area: 'matematica',
+                areaShort: 'Matemática',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C1 • H4',
+                difficulty: 'Médio',
+                topic: 'Matemática Financeira: Descontos Sucessivos e Valor Inicial',
+                context: `Uma loja de equipamentos eletrônicos anunciou um notebook durante uma promoção relâmpago com um primeiro desconto de 20% sobre o preço original de tabela. Para clientes que optarem pelo pagamento à vista via PIX, a loja concede um segundo desconto adicional de 10%, calculado sobre o valor já reduzido pela promoção relâmpago.`,
+                source: 'Matriz de Matemática Financeira do ENEM 2026.',
+                command: 'Se um cliente comprar esse notebook pagando à vista via PIX e desembolsar o valor final de R$ 2 880,00, qual era o preço original de tabela do produto antes dos dois descontos?',
+                howToSolve: {
+                    commandAsk: 'Determinar o preço original (P₀) antes dos descontos sucessivos de 20% e 10%, sabendo que o valor final pago foi R$ 2.880,00.',
+                    keyClues: 'Fator de desconto 1 (20%) = 0,80 | Fator de desconto 2 (10%) = 0,90 | Valor final = 2.880.',
+                    stepByStep: '1) Multiplique os fatores de desconto: 0,80 × 0,90 = 0,72 (o cliente pagou 72% do preço original). 2) Resolva a equação: 0,72 · P₀ = 2.880 → P₀ = 2.880 / 0,72 = 288.000 / 72 = R$ 4.000,00.',
+                    trapAlert: 'Descontos sucessivos de 20% e 10% equivalem a 28% de desconto total (1 - 0,72), e NÃO a 30% (distrator D)!'
+                },
+                options: [
+                    'R$ 3 686,40.',
+                    'R$ 3 744,00.',
+                    'R$ 4 000,00.',
+                    'R$ 4 114,28.',
+                    'R$ 4 200,00.'
+                ],
+                correctIndex: 2,
+                correctExplanation: 'Aplicando os fatores multiplicativos sucessivos, temos P_final = P₀ × 0,80 × 0,90 = 0,72 · P₀. Como P_final = 2.880, segue que P₀ = 2.880 / 0,72 = R$ 4.000,00.',
+                optionExplanations: [
+                    '[Distrator: Incidência sobre o Valor Final] Aplicou +28% sobre R$ 2.880,00 (2880 × 1,28 = 3.686,40) em vez de dividir por 0,72.',
+                    '[Distrator: Soma Simples sobre o Final] Somou 20% + 10% = 30% e aplicou sobre R$ 2.880,00 (2880 × 1,30 = 3.744,00).',
+                    '[Gabarito Oficial] P₀ = 2.880 / (0,80 × 0,90) = 2.880 / 0,72 = R$ 4.000,00.',
+                    '[Distrator: Soma Direta de Taxas] Supôs que o desconto total fosse de 30% e dividiu 2.880 por 0,70 (obtendo 4.114,28).',
+                    '[Distrator: Arredondamento Incorreto] Estimativa sem cálculo exato dos fatores.'
+                ]
+            },
+            {
+                id: 24,
+                area: 'matematica',
+                areaShort: 'Matemática',
+                badge: '2º Dia • ENEM 2026',
+                competence: 'C1 • H2',
+                difficulty: 'Difícil',
+                topic: 'Análise Combinatória e Probabilidade: Comissões Interdisciplinares',
+                context: `Um laboratório de pesquisa conta com 5 biólogos e 4 matemáticos. Para participar de um congresso internacional em 2026, a instituição sorteará aleatoriamente uma comissão composta por 3 pesquisadores desse grupo. Todavia, as regras do edital de financiamento exigem que a comissão seja obrigatoriamente interdisciplinar, isto é, contenha pelo menos 1 biólogo e pelo menos 1 matemático.`,
+                source: 'Matriz de Análise Combinatória e Probabilidade do ENEM 2026.',
+                command: 'Escolhendo-se ao acaso 3 pesquisadores dentre os 9 disponíveis, a quantidade de comissões válidas (interdisciplinares) e a probabilidade de a comissão sorteada atender à exigência do edital são, respectivamente:',
+                howToSolve: {
+                    commandAsk: 'Calcular o número de comissões de 3 pessoas com pelo menos 1 biólogo e 1 matemático e dividir pelo total de comissões possíveis.',
+                    keyClues: 'Total = 9 pessoas (5B + 4M) | Grupo de 3 (ordem não importa → Combinação).',
+                    stepByStep: '1) Total de comissões sem restrição: C(9,3) = (9×8×7)/(3×2×1) = 84. 2) Comissões proibidas (apenas uma área): só biólogos C(5,3) = 10; só matemáticos C(4,3) = 4 → Total proibidas = 14. 3) Válidas = 84 - 14 = 70. 4) Probabilidade = 70 / 84 = 5 / 6.',
+                    trapAlert: 'Não esqueça de subtrair os 14 casos proibidos do total de 84 (se você parar no 14, marcará a letra A)!'
+                },
+                options: [
+                    '14 comissões e probabilidade de 1/6.',
+                    '60 comissões e probabilidade de 5/7.',
+                    '70 comissões e probabilidade de 5/6.',
+                    '84 comissões e probabilidade de 6/7.',
+                    '420 comissões e probabilidade de 5/6.'
+                ],
+                correctIndex: 2,
+                correctExplanation: 'O espaço amostral é C(9,3) = 84 comissões. Retirando as comissões formadas exclusivamente por biólogos (C(5,3) = 10) ou exclusivamente por matemáticos (C(4,3) = 4), restam 84 - 14 = 70 comissões interdisciplinares. A probabilidade é P = 70/84 = 5/6.',
+                optionExplanations: [
+                    '[Distrator: Evento Complementar] Calculou os casos proibidos (10 + 4 = 14 e P = 14/84 = 1/6) sem subtraí-los do total.',
+                    '[Distrator: Contagem Incompleta] Errou o cálculo de um dos subcasos na contagem direta.',
+                    '[Gabarito Oficial] 70 comissões válidas (40 com 2B+1M e 30 com 1B+2M) e probabilidade 70/84 = 5/6.',
+                    '[Distrator: Espaço Amostral Total] 84 é o número total de comissões possíveis sem aplicar a restrição do edital.',
+                    '[Distrator: Uso de Arranjo] Multiplicou as combinações por 3! = 6 (70 × 6 = 420), como se a ordem dos membros importasse.'
+                ]
+            }
+        ];
+
+        // State Management
+        let questionsData = [...INITIAL_QUESTIONS];
+        let userAnswers = {};      // { qId: optionIndex }
+        let strikedOptions = {};   // { "qId-optIdx": boolean }
+        let bookmarked = {};       // { qId: boolean }
+        let userNotes = {};        // { qId: string }
+        let highlightedSents = {}; // { "qId-sentIdx": boolean }
+        let guideVisibility = {};  // { qId: boolean }
+
+        let currentArea = 'all';
+        let viewMode = 'focus';    // Default to clean 1-by-1 Exam Desk mode ('focus' or 'list')
+        let focusIndex = 0;
+        let alwaysShowGuide = true;
+        let highlighterActive = false;
+
+        window.onload = function() {
+            loadPersistedState();
+            renderAreaNavs();
+            applyFilters();
+            setupKeyboardShortcuts();
+        };
+
+        function loadPersistedState() {
+            try {
+                const a = localStorage.getItem('caderno_enem26_answers');
+                if (a) userAnswers = JSON.parse(a);
+                const s = localStorage.getItem('caderno_enem26_striked');
+                if (s) strikedOptions = JSON.parse(s);
+                const b = localStorage.getItem('caderno_enem26_bookmarks');
+                if (b) bookmarked = JSON.parse(b);
+                const n = localStorage.getItem('caderno_enem26_notes');
+                if (n) userNotes = JSON.parse(n);
+                const h = localStorage.getItem('caderno_enem26_highlights');
+                if (h) highlightedSents = JSON.parse(h);
+                const c = localStorage.getItem('caderno_enem26_custom');
+                if (c) questionsData = [...INITIAL_QUESTIONS, ...JSON.parse(c)];
+            } catch (e) {}
+        }
+
+        function persistState() {
+            try {
+                localStorage.setItem('caderno_enem26_answers', JSON.stringify(userAnswers));
+                localStorage.setItem('caderno_enem26_striked', JSON.stringify(strikedOptions));
+                localStorage.setItem('caderno_enem26_bookmarks', JSON.stringify(bookmarked));
+                localStorage.setItem('caderno_enem26_notes', JSON.stringify(userNotes));
+                localStorage.setItem('caderno_enem26_highlights', JSON.stringify(highlightedSents));
+            } catch (e) {}
+        }
+
+        // Theme & Highlighter Toggles
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function toggleHighlighterMode() {
+            highlighterActive = !highlighterActive;
+            const btn = document.getElementById('btn-highlighter');
+            const container = document.getElementById('questions-container');
+            if (highlighterActive) {
+                btn.classList.add('bg-yellow-100', 'border-yellow-500', 'text-stone-900', 'dark:bg-yellow-900/40', 'dark:text-yellow-200');
+                container.classList.add('hl-mode-active');
+            } else {
+                btn.classList.remove('bg-yellow-100', 'border-yellow-500', 'text-stone-900', 'dark:bg-yellow-900/40', 'dark:text-yellow-200');
+                container.classList.remove('hl-mode-active');
+            }
+        }
+
+        function toggleSentenceHighlight(qId, sentIdx) {
+            if (!highlighterActive) return;
+            const key = `${qId}-${sentIdx}`;
+            highlightedSents[key] = !highlightedSents[key];
+            persistState();
+            const el = document.getElementById(`sent-${key}`);
+            if (el) el.classList.toggle('highlighted', !!highlightedSents[key]);
+        }
+
+        // View Mode & Guide Controls
+        function toggleViewMode() {
+            viewMode = viewMode === 'focus' ? 'list' : 'focus';
+            focusIndex = 0;
+            document.getElementById('view-mode-text').textContent = viewMode === 'focus' ? 'Modo: Foco' : 'Modo: Lista';
+            applyFilters();
+        }
+
+        function toggleGuideDefault() {
+            alwaysShowGuide = document.getElementById('always-show-guide').checked;
+            questionsData.forEach(q => { guideVisibility[q.id] = alwaysShowGuide; });
+            applyFilters();
+        }
+
+        function toggleSingleGuide(qId) {
+            const current = guideVisibility[qId] !== undefined ? guideVisibility[qId] : alwaysShowGuide;
+            guideVisibility[qId] = !current;
+            const el = document.getElementById(`guide-box-${qId}`);
+            const lbl = document.getElementById(`guide-lbl-${qId}`);
+            if (el && lbl) {
+                el.classList.toggle('hidden', !guideVisibility[qId]);
+                lbl.textContent = guideVisibility[qId] ? 'Recolher guia [H]' : 'Expandir guia [H]';
+            }
+        }
+
+        // Navigation & Filtering
+        function selectArea(areaId) {
+            currentArea = areaId;
+            focusIndex = 0;
+            renderAreaNavs();
+            applyFilters();
+        }
+
+        function renderAreaNavs() {
+            const topNav = document.getElementById('top-area-nav');
+            const mobNav = document.getElementById('mobile-area-nav');
+
+            const html = AREAS_CONFIG.map(a => {
+                const isSelected = currentArea === a.id;
+                const list = a.id === 'all' ? questionsData : questionsData.filter(q => q.area === a.id);
+                const done = list.filter(q => userAnswers[q.id] !== undefined).length;
+
+                const activeCls = isSelected
+                    ? 'bg-white dark:bg-[#242421] text-[#161615] dark:text-[#F3F0E6] shadow-sm font-bold border border-[#DFD9CE] dark:border-[#3A3A35]'
+                    : 'text-[#5C5852] dark:text-[#A09C94] hover:text-[#161615] dark:hover:text-white font-medium border border-transparent';
+
+                return `
+                    <button onclick="selectArea('${a.id}')" class="px-2.5 py-1 rounded-md text-xs transition flex items-center gap-1.5 shrink-0 ${activeCls}">
+                        <span class="w-1.5 h-1.5 rounded-full ${a.dot}"></span>
+                        <span>${a.name}</span>
+                        <span class="font-mono text-[10px] opacity-70">${done}/${list.length}</span>
+                    </button>
+                `;
+            }).join('');
+
+            topNav.innerHTML = html;
+            mobNav.innerHTML = html;
+        }
+
+        function getFilteredQuestions() {
+            const qSearch = (document.getElementById('search-input')?.value || '').toLowerCase().trim();
+            const fStatus = document.getElementById('filter-status')?.value || 'all';
+            const fDiff = document.getElementById('filter-difficulty')?.value || 'all';
+
+            return questionsData.filter(q => {
+                if (currentArea !== 'all' && q.area !== currentArea) return false;
+                if (fDiff !== 'all' && q.difficulty !== fDiff) return false;
+
+                const isAns = userAnswers[q.id] !== undefined;
+                const isHit = userAnswers[q.id] === q.correctIndex;
+                if (fStatus === 'unanswered' && isAns) return false;
+                if (fStatus === 'correct' && (!isAns || !isHit)) return false;
+                if (fStatus === 'wrong' && (!isAns || isHit)) return false;
+                if (fStatus === 'bookmarked' && !bookmarked[q.id]) return false;
+
+                if (qSearch) {
+                    const text = `${q.id} ${q.topic} ${q.context} ${q.command} ${q.areaShort}`.toLowerCase();
+                    if (!text.includes(qSearch)) return false;
+                }
+                return true;
+            });
+        }
+
+        function applyFilters() {
+            const filtered = getFilteredQuestions();
+            if (focusIndex >= filtered.length) focusIndex = 0;
+
+            const areaObj = AREAS_CONFIG.find(a => a.id === currentArea) || AREAS_CONFIG[0];
+            document.getElementById('active-area-indicator').textContent = areaObj.fullTitle;
+            document.getElementById('active-filter-count').textContent = `(${filtered.length} ${filtered.length === 1 ? 'item' : 'itens'})`;
+
+            updateMetricsAndTRI();
+            renderGabaritoGrid(filtered);
+            renderQuestionsFeed(filtered);
+            renderAreaNavs();
+        }
+
+        function navigateFocus(delta) {
+            const filtered = getFilteredQuestions();
+            const next = focusIndex + delta;
+            if (next >= 0 && next < filtered.length) {
+                focusIndex = next;
+                renderGabaritoGrid(filtered);
+                renderQuestionsFeed(filtered);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function jumpToQuestion(idxInFiltered, qId) {
+            if (viewMode === 'focus') {
+                focusIndex = idxInFiltered;
+                const filtered = getFilteredQuestions();
+                renderGabaritoGrid(filtered);
+                renderQuestionsFeed(filtered);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                const el = document.getElementById(`q-card-${qId}`);
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Answer, Strikethrough, Bookmark, Notes
+        function selectOption(qId, optIdx) {
+            userAnswers[qId] = optIdx;
+            persistState();
+            applyFilters();
+        }
+
+        function toggleStrikeOption(event, qId, optIdx) {
+            event.stopPropagation();
+            const key = `${qId}-${optIdx}`;
+            strikedOptions[key] = !strikedOptions[key];
+            persistState();
+            applyFilters();
+        }
+
+        function toggleBookmark(qId) {
+            bookmarked[qId] = !bookmarked[qId];
+            persistState();
+            applyFilters();
+        }
+
+        function saveUserNote(qId, val) {
+            userNotes[qId] = val;
+            persistState();
+        }
+
+        function resetSingleQuestion(qId) {
+            delete userAnswers[qId];
+            persistState();
+            applyFilters();
+        }
+
+        function resetAllAnswers() {
+            userAnswers = {};
+            strikedOptions = {};
+            persistState();
+            applyFilters();
+        }
+
+        // Render Cartão-Resposta (Sidebar Grid)
+        function renderGabaritoGrid(filtered) {
+            const grid = document.getElementById('gabarito-grid');
+            const letters = ['A', 'B', 'C', 'D', 'E'];
+
+            grid.innerHTML = filtered.map((q, idx) => {
+                const ans = userAnswers[q.id];
+                const isCurrent = viewMode === 'focus' && idx === focusIndex;
+                const isMarked = bookmarked[q.id];
+
+                let cellStyle = 'bg-[#F7F4ED] dark:bg-[#121211] text-[#5C5852] dark:text-[#A09C94] border-[#DFD9CE] dark:border-[#2E2E2A] hover:border-[#161615]';
+                let subLabel = String(q.id).padStart(2, '0');
+
+                if (ans !== undefined) {
+                    if (ans === q.correctIndex) {
+                        cellStyle = 'bg-emerald-700 text-white border-emerald-800 font-bold';
+                        subLabel = `${String(q.id).padStart(2, '0')}·${letters[ans]}`;
+                    } else {
+                        cellStyle = 'bg-[#C84B31] text-white border-[#A3361F] font-bold';
+                        subLabel = `${String(q.id).padStart(2, '0')}·${letters[ans]}`;
+                    }
+                }
+
+                const focusOutline = isCurrent ? 'ring-2 ring-[#161615] dark:ring-[#F3F0E6] ring-offset-1 dark:ring-offset-[#1A1A18]' : '';
+
+                return `
+                    <button 
+                        onclick="jumpToQuestion(${idx}, ${q.id})" 
+                        class="relative h-8 rounded border font-mono text-[11px] flex items-center justify-center transition ${cellStyle} ${focusOutline}"
+                        title="Questão ${q.id}: ${q.topic}"
+                    >
+                        <span>${subLabel}</span>
+                        ${isMarked ? '<span class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-amber-400 border border-stone-900"></span>' : ''}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        // Update Score & TRI Coherence Metrics
+        function updateMetricsAndTRI() {
+            const total = questionsData.length;
+            let answered = 0, hits = 0, misses = 0;
+
+            const tri = {
+                'Fácil': { hit: 0, ans: 0, tot: 0 },
+                'Médio': { hit: 0, ans: 0, tot: 0 },
+                'Difícil': { hit: 0, ans: 0, tot: 0 }
+            };
+
+            questionsData.forEach(q => {
+                if (tri[q.difficulty]) tri[q.difficulty].tot++;
+                if (userAnswers[q.id] !== undefined) {
+                    answered++;
+                    if (tri[q.difficulty]) tri[q.difficulty].ans++;
+                    if (userAnswers[q.id] === q.correctIndex) {
+                        hits++;
+                        if (tri[q.difficulty]) tri[q.difficulty].hit++;
+                    } else {
+                        misses++;
+                    }
+                }
+            });
+
+            const rate = answered > 0 ? Math.round((hits / answered) * 100) : 0;
+
+            document.getElementById('nav-score-pill').textContent = `${hits}/${total}`;
+            document.getElementById('side-correct').textContent = hits;
+            document.getElementById('side-wrong').textContent = misses;
+            document.getElementById('side-rate').textContent = `${rate}%`;
+
+            // TRI Bars
+            const pctE = tri['Fácil'].tot ? Math.round((tri['Fácil'].hit / tri['Fácil'].tot) * 100) : 0;
+            const pctM = tri['Médio'].tot ? Math.round((tri['Médio'].hit / tri['Médio'].tot) * 100) : 0;
+            const pctH = tri['Difícil'].tot ? Math.round((tri['Difícil'].hit / tri['Difícil'].tot) * 100) : 0;
+
+            document.getElementById('tri-bar-easy-label').textContent = `${tri['Fácil'].hit}/${tri['Fácil'].tot}`;
+            document.getElementById('tri-bar-med-label').textContent = `${tri['Médio'].hit}/${tri['Médio'].tot}`;
+            document.getElementById('tri-bar-hard-label').textContent = `${tri['Difícil'].hit}/${tri['Difícil'].tot}`;
+
+            document.getElementById('tri-bar-easy').style.width = `${pctE}%`;
+            document.getElementById('tri-bar-med').style.width = `${pctM}%`;
+            document.getElementById('tri-bar-hard').style.width = `${pctH}%`;
+
+            const badge = document.getElementById('tri-coherence-badge');
+            if (answered < 3) {
+                badge.textContent = 'Responda + itens';
+                badge.className = 'font-mono text-[10px] px-1.5 py-0.5 rounded bg-[#EFECE4] dark:bg-[#242421] text-[#5C5852] dark:text-[#A09C94]';
+            } else if (pctE >= pctM && pctM >= pctH) {
+                badge.textContent = 'Alta Coerência';
+                badge.className = 'font-mono text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-semibold';
+            } else {
+                badge.textContent = 'Alerta Pedagógico';
+                badge.className = 'font-mono text-[10px] px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 font-semibold';
+            }
+        }
+
+        // Format base text into interactive highlightable sentences
+        function renderHighlightableText(qId, rawText) {
+            const sentences = rawText.split(/(?<=[.?!;])\s+/);
+            return sentences.map((s, idx) => {
+                const key = `${qId}-${idx}`;
+                const isHl = highlightedSents[key] ? 'highlighted' : '';
+                return `<span id="sent-${key}" onclick="toggleSentenceHighlight(${qId}, ${idx})" class="hl-sentence ${isHl}">${s} </span>`;
+            }).join('');
+        }
+
+        // Render Main Questions Feed (4-Step Flow)
+        function renderQuestionsFeed(filtered) {
+            const container = document.getElementById('questions-container');
+            const topBar = document.getElementById('focus-top-bar');
+            const botBar = document.getElementById('focus-bottom-bar');
+
+            if (filtered.length === 0) {
+                topBar.classList.add('hidden');
+                botBar.classList.add('hidden');
+                container.innerHTML = `
+                    <div class="editorial-card rounded-xl p-10 text-center space-y-3">
+                        <p class="font-mono text-xs uppercase text-[#C84B31]">Filtro sem resultados</p>
+                        <h3 class="text-base font-bold">Nenhuma questão encontrada para esta seleção</h3>
+                        <p class="text-xs text-[#5C5852] dark:text-[#A09C94]">Altere os filtros na barra lateral ou limpe a busca por palavra-chave.</p>
+                        <button onclick="selectArea('all'); document.getElementById('search-input').value=''; document.getElementById('filter-status').value='all'; document.getElementById('filter-difficulty').value='all'; applyFilters();" class="px-3.5 py-1.5 rounded bg-[#161615] text-white text-xs font-semibold">
+                            Restaurar Caderno Completo
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            let items = filtered;
+            if (viewMode === 'focus') {
+                items = [filtered[focusIndex]];
+                topBar.classList.remove('hidden');
+                botBar.classList.remove('hidden');
+                const posText = `Questão ${String(focusIndex + 1).padStart(2, '0')} de ${String(filtered.length).padStart(2, '0')}`;
+                document.getElementById('focus-counter-top').textContent = posText;
+                document.getElementById('focus-counter-bottom').textContent = posText;
+                document.getElementById('btn-prev-top').disabled = focusIndex === 0;
+                document.getElementById('btn-next-top').disabled = focusIndex === filtered.length - 1;
+                document.getElementById('btn-prev-bottom').disabled = focusIndex === 0;
+                document.getElementById('btn-next-bottom').disabled = focusIndex === filtered.length - 1;
+            } else {
+                topBar.classList.add('hidden');
+                botBar.classList.add('hidden');
+            }
+
+            const letters = ['A', 'B', 'C', 'D', 'E'];
+
+            container.innerHTML = items.map(q => {
+                const selectedIdx = userAnswers[q.id];
+                const isAnswered = selectedIdx !== undefined;
+                const isCorrect = isAnswered && selectedIdx === q.correctIndex;
+                const isGuideOpen = guideVisibility[q.id] !== undefined ? guideVisibility[q.id] : alwaysShowGuide;
+                const isBookmarked = !!bookmarked[q.id];
+                const noteText = userNotes[q.id] || '';
+
+                // Subtle dot color for Area
+                const areaCfg = AREAS_CONFIG.find(a => a.id === q.area) || AREAS_CONFIG[0];
+
+                // Difficulty Tag
+                let diffTag = 'text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/50 border-emerald-200 dark:border-emerald-800/60';
+                if (q.difficulty === 'Médio') diffTag = 'text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/50 border-amber-200 dark:border-amber-800/60';
+                if (q.difficulty === 'Difícil') diffTag = 'text-rose-800 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/50 border-rose-200 dark:border-rose-800/60';
+
+                return `
+                <article id="q-card-${q.id}" class="editorial-card rounded-xl overflow-hidden transition-all">
+                    
+                    <!-- TOP TECHNICAL HEADER STRIP -->
+                    <div class="px-5 sm:px-7 py-3.5 bg-[#EFECE4]/70 dark:bg-[#242421]/60 border-b border-[#DFD9CE] dark:border-[#2E2E2A] flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="font-mono font-bold text-xs px-2 py-0.5 rounded bg-[#161615] text-[#F7F4ED] dark:bg-[#F3F0E6] dark:text-[#161615]">
+                                Q.${String(q.id).padStart(2, '0')}
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-white dark:bg-[#1A1A18] border border-[#DFD9CE] dark:border-[#3A3A35]">
+                                <i class="w-1.5 h-1.5 rounded-full ${areaCfg.dot}"></i>
+                                ${q.areaShort}
+                            </span>
+                            <span class="font-mono text-[11px] px-2 py-0.5 rounded border ${diffTag}">
+                                TRI: ${q.difficulty}
+                            </span>
+                            <span class="font-mono text-[11px] text-[#5C5852] dark:text-[#A09C94] hidden sm:inline">
+                                [${q.competence}]
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <span class="font-mono text-[11px] text-[#5C5852] dark:text-[#A09C94]">${q.badge}</span>
+                            
+                            <!-- Bookmark Star -->
+                            <button onclick="toggleBookmark(${q.id})" class="px-2 py-0.5 rounded text-xs border ${isBookmarked ? 'bg-amber-100 border-amber-400 text-amber-900 dark:bg-amber-950/60 dark:text-amber-300' : 'bg-white dark:bg-[#1A1A18] border-[#DFD9CE] dark:border-[#3A3A35] text-[#5C5852]'} transition" title="Marcar questão para revisão">
+                                ${isBookmarked ? '★ Revisar' : '☆ Revisar'}
+                            </button>
+
+                            ${isAnswered ? `
+                                <button onclick="resetSingleQuestion(${q.id})" class="font-mono text-[11px] px-2 py-0.5 rounded bg-white dark:bg-[#1A1A18] border border-[#DFD9CE] dark:border-[#3A3A35] hover:border-[#161615] transition">
+                                    ↺ Refazer
+                                </button>
+                            ` : ''}
+                        </div>
+                    </div>
+
+                    <!-- MAIN CARD BODY -->
+                    <div class="p-5 sm:p-8 space-y-6">
+
+                        <!-- =============================================================== -->
+                        <!-- ETAPA 1: A PERGUNTA (TÓPICO + TEXTO-BASE + FONTE + COMANDO)     -->
+                        <!-- =============================================================== -->
+                        <section class="space-y-4">
+                            <div class="flex items-baseline justify-between gap-2">
+                                <h2 class="font-bold text-base sm:text-lg tracking-tight text-[#161615] dark:text-[#F3F0E6]">
+                                    ${q.topic}
+                                </h2>
+                                <span class="font-mono text-[10px] uppercase tracking-widest text-[#5C5852] dark:text-[#A09C94] shrink-0">Etapa 1 • Enunciado</span>
+                            </div>
+
+                            <!-- Printed Book / Exam Base Text -->
+                            <div class="pl-4 sm:pl-5 border-l-2 border-[#C8C0B3] dark:border-[#3A3A35] py-1 space-y-2.5">
+                                <p class="font-serif text-[15px] sm:text-[16.5px] leading-[1.75] text-[#161615] dark:text-[#E5E0D8] text-justify">
+                                    ${renderHighlightableText(q.id, q.context)}
+                                </p>
+                                <div class="font-sans text-[11px] text-[#5C5852] dark:text-[#A09C94] tracking-wide uppercase">
+                                    ${q.source}
+                                </div>
+                            </div>
+
+                            <!-- Question Command -->
+                            <p class="font-sans font-semibold text-[15px] sm:text-base text-[#161615] dark:text-white leading-snug pt-2">
+                                ${q.command}
+                            </p>
+                        </section>
+
+                        <!-- =============================================================== -->
+                        <!-- ETAPA 2: COMO RESOLVER ELA (GUIA ESTRATÉGICO ANTES DE MARCAR)   -->
+                        <!-- =============================================================== -->
+                        <section class="blueprint-note rounded-lg overflow-hidden">
+                            <div class="px-4 py-2.5 flex items-center justify-between border-b border-[#E6DEC8] dark:border-[#383327]">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-amber-600 text-white font-bold">
+                                        Etapa 2 • Como Resolver Ela
+                                    </span>
+                                    <span class="text-xs font-semibold text-amber-950 dark:text-amber-200">
+                                        Roteiro de resolução passo a passo antes das alternativas
+                                    </span>
+                                </div>
+                                <button onclick="toggleSingleGuide(${q.id})" class="font-mono text-[11px] text-amber-900 dark:text-amber-300 hover:underline">
+                                    <span id="guide-lbl-${q.id}">${isGuideOpen ? 'Recolher guia [H]' : 'Expandir guia [H]'}</span>
+                                </button>
+                            </div>
+
+                            <div id="guide-box-${q.id}" class="${isGuideOpen ? '' : 'hidden'} p-4 grid grid-cols-1 md:grid-cols-2 gap-3.5 text-xs leading-relaxed">
+                                <div class="bg-white/80 dark:bg-[#161615]/70 p-3 rounded border border-[#E6DEC8] dark:border-[#2E2E2A]">
+                                    <div class="font-mono font-bold text-[11px] uppercase text-amber-800 dark:text-amber-400 mb-1">
+                                        01. Leitura do Comando
+                                    </div>
+                                    <p class="text-[#161615] dark:text-[#E5E0D8]">${q.howToSolve.commandAsk}</p>
+                                </div>
+
+                                <div class="bg-white/80 dark:bg-[#161615]/70 p-3 rounded border border-[#E6DEC8] dark:border-[#2E2E2A]">
+                                    <div class="font-mono font-bold text-[11px] uppercase text-blue-800 dark:text-blue-400 mb-1">
+                                        02. Pistas no Texto & Dados
+                                    </div>
+                                    <p class="text-[#161615] dark:text-[#E5E0D8]">${q.howToSolve.keyClues}</p>
+                                </div>
+
+                                <div class="bg-white/80 dark:bg-[#161615]/70 p-3 rounded border border-[#E6DEC8] dark:border-[#2E2E2A]">
+                                    <div class="font-mono font-bold text-[11px] uppercase text-emerald-800 dark:text-emerald-400 mb-1">
+                                        03. Passo a Passo Analítico
+                                    </div>
+                                    <p class="text-[#161615] dark:text-[#E5E0D8]">${q.howToSolve.stepByStep}</p>
+                                </div>
+
+                                <div class="bg-white/80 dark:bg-[#161615]/70 p-3 rounded border border-[#E6DEC8] dark:border-[#2E2E2A]">
+                                    <div class="font-mono font-bold text-[11px] uppercase text-[#C84B31] dark:text-rose-400 mb-1">
+                                        04. Cuidado com a Pegadinha
+                                    </div>
+                                    <p class="text-[#161615] dark:text-[#E5E0D8]">${q.howToSolve.trapAlert}</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- =============================================================== -->
+                        <!-- ETAPA 3: AS ALTERNATIVAS (COM BOTÃO DE RISCAR DISTRATORES)      -->
+                        <!-- =============================================================== -->
+                        <section class="space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <span class="font-mono text-[10px] uppercase tracking-widest text-[#5C5852] dark:text-[#A09C94]">
+                                    Etapa 3 • Alternativas (Use ✂ para riscar distratores)
+                                </span>
+                                ${!isAnswered ? `<span class="font-mono text-[10px] text-[#5C5852] dark:text-[#A09C94] hidden sm:inline">Teclas [A–E] ou clique para responder</span>` : ''}
+                            </div>
+
+                            <div class="space-y-2">
+                                ${q.options.map((optText, idx) => {
+                                    const isStriked = !!strikedOptions[`${q.id}-${idx}`];
+                                    let rowCls = 'bg-[#F7F4ED]/60 dark:bg-[#121211]/60 border-[#DFD9CE] dark:border-[#2E2E2A] hover:border-[#161615] dark:hover:border-[#A09C94]';
+                                    let circleCls = 'bg-white dark:bg-[#1A1A18] border-[#C8C0B3] dark:border-[#3A3A35] text-[#161615] dark:text-[#F3F0E6]';
+                                    let pillBadge = '';
+
+                                    if (isAnswered) {
+                                        if (idx === q.correctIndex) {
+                                            rowCls = 'bg-emerald-50/90 dark:bg-emerald-950/30 border-emerald-600 dark:border-emerald-500';
+                                            circleCls = 'bg-emerald-700 border-emerald-700 text-white';
+                                            pillBadge = `<span class="font-mono text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-700 text-white shrink-0">Gabarito</span>`;
+                                        } else if (idx === selectedIdx && idx !== q.correctIndex) {
+                                            rowCls = 'bg-rose-50/90 dark:bg-rose-950/30 border-[#C84B31] dark:border-rose-500';
+                                            circleCls = 'bg-[#C84B31] border-[#C84B31] text-white';
+                                            pillBadge = `<span class="font-mono text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-[#C84B31] text-white shrink-0">Sua Marcação</span>`;
+                                        } else {
+                                            rowCls = 'bg-[#F7F4ED]/30 dark:bg-[#121211]/30 border-[#DFD9CE]/60 dark:border-[#2E2E2A]/60 opacity-65';
+                                        }
+                                    }
+
+                                    return `
+                                    <div class="flex items-stretch gap-1.5 ${isStriked && !isAnswered ? 'option-striked' : ''}">
+                                        <button 
+                                            onclick="selectOption(${q.id}, ${idx})"
+                                            class="flex-1 text-left px-3.5 py-3 rounded-lg border transition flex items-start sm:items-center gap-3 ${rowCls}"
+                                        >
+                                            <span class="w-7 h-7 rounded-full border font-mono font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 sm:mt-0 ${circleCls}">
+                                                ${letters[idx]}
+                                            </span>
+                                            <span class="option-text-content text-sm leading-snug text-[#161615] dark:text-[#F3F0E6] flex-1">
+                                                ${optText}
+                                            </span>
+                                            ${pillBadge}
+                                        </button>
+                                        ${!isAnswered ? `
+                                            <button 
+                                                onclick="toggleStrikeOption(event, ${q.id}, ${idx})" 
+                                                class="px-2.5 rounded-lg border border-[#DFD9CE] dark:border-[#2E2E2A] bg-white dark:bg-[#1A1A18] text-[#5C5852] hover:text-[#C84B31] hover:border-[#C84B31] text-xs font-mono transition flex items-center justify-center"
+                                                title="${isStriked ? 'Restaurar alternativa' : 'Riscar alternativa (eliminar distrator)'}"
+                                            >
+                                                ✂
+                                            </button>
+                                        ` : ''}
+                                    </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </section>
+
+                        <!-- =============================================================== -->
+                        <!-- ETAPA 4: A RESPOSTA COMENTADA (DIAGNÓSTICO DE ACERTO OU ERRO)   -->
+                        <!-- =============================================================== -->
+                        ${isAnswered ? `
+                            <section class="pt-4 border-t-2 border-dashed border-[#DFD9CE] dark:border-[#2E2E2A] space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-mono text-[10px] uppercase tracking-widest font-bold ${isCorrect ? 'text-emerald-700 dark:text-emerald-400' : 'text-[#C84B31] dark:text-rose-400'}">
+                                        Etapa 4 • Diagnóstico Pós-Resolução
+                                    </span>
+                                    <span class="font-mono text-[11px] text-[#5C5852] dark:text-[#A09C94]">
+                                        Gabarito Oficial: <strong>Alternativa ${letters[q.correctIndex]}</strong>
+                                    </span>
+                                </div>
+
+                                ${isCorrect ? `
+                                    <!-- CALLOUT: SE ACERTOU -->
+                                    <div class="p-4 sm:p-5 rounded-lg bg-emerald-50/80 dark:bg-emerald-950/25 border border-emerald-600/50 space-y-2">
+                                        <div class="flex items-center gap-2">
+                                            <span class="px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-emerald-700 text-white">ACERTOU • ${letters[q.correctIndex]}</span>
+                                            <h4 class="font-bold text-sm sm:text-base text-emerald-950 dark:text-emerald-200">
+                                                Raciocínio validado pela Matriz do ENEM!
+                                            </h4>
+                                        </div>
+                                        <p class="text-xs sm:text-sm leading-relaxed text-[#161615] dark:text-[#E5E0D8]">
+                                            ${q.correctExplanation}
+                                        </p>
+                                    </div>
+                                ` : `
+                                    <!-- CALLOUT: SE ERROU (EXPLICA O ERRO ESPECÍFICO + EXPLICA A CORRETA) -->
+                                    <div class="p-4 sm:p-5 rounded-lg bg-rose-50/70 dark:bg-rose-950/20 border border-[#C84B31]/60 space-y-3.5">
+                                        <div class="flex flex-wrap items-center gap-2">
+                                            <span class="px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-[#C84B31] text-white">VOCÊ MARCOU ${letters[selectedIdx]}</span>
+                                            <span class="font-mono text-xs text-[#5C5852]">→</span>
+                                            <span class="px-2 py-0.5 rounded font-mono text-[11px] font-bold bg-emerald-700 text-white">GABARITO: ${letters[q.correctIndex]}</span>
+                                        </div>
+
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+                                            <!-- Por que errou na alternativa escolhida -->
+                                            <div class="p-3.5 rounded bg-white dark:bg-[#161615] border-l-4 border-[#C84B31] space-y-1">
+                                                <div class="font-mono text-[11px] font-bold uppercase text-[#C84B31] dark:text-rose-400">
+                                                    Por que a sua escolha (${letters[selectedIdx]}) é incorreta:
+                                                </div>
+                                                <p class="text-[#161615] dark:text-[#E5E0D8] leading-relaxed">
+                                                    ${q.optionExplanations[selectedIdx]}
+                                                </p>
+                                            </div>
+
+                                            <!-- Por que a correta é o gabarito -->
+                                            <div class="p-3.5 rounded bg-white dark:bg-[#161615] border-l-4 border-emerald-600 space-y-1">
+                                                <div class="font-mono text-[11px] font-bold uppercase text-emerald-700 dark:text-emerald-400">
+                                                    Por que a alternativa ${letters[q.correctIndex]} é a correta:
+                                                </div>
+                                                <p class="text-[#161615] dark:text-[#E5E0D8] leading-relaxed">
+                                                    ${q.correctExplanation}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `}
+
+                                <!-- RAIO-X COMPLETO DE TODAS AS 5 ALTERNATIVAS -->
+                                <div class="rounded-lg border border-[#DFD9CE] dark:border-[#2E2E2A] bg-[#F7F4ED]/60 dark:bg-[#121211]/50 p-4 space-y-2.5">
+                                    <div class="font-mono text-[11px] font-bold uppercase tracking-wider text-[#5C5852] dark:text-[#A09C94]">
+                                        Raio-X Completo das Alternativas (A–E)
+                                    </div>
+                                    <div class="divide-y divide-[#DFD9CE] dark:divide-[#2E2E2A] text-xs">
+                                        ${q.optionExplanations.map((exp, idx) => {
+                                            const isGab = idx === q.correctIndex;
+                                            const isPicked = idx === selectedIdx;
+                                            return `
+                                                <div class="py-2 flex items-start gap-2.5">
+                                                    <span class="font-mono font-bold text-[11px] px-1.5 py-0.5 rounded shrink-0 ${isGab ? 'bg-emerald-700 text-white' : (isPicked ? 'bg-[#C84B31] text-white' : 'bg-[#EFECE4] dark:bg-[#242421] text-[#5C5852]')}">
+                                                        ${letters[idx]}
+                                                    </span>
+                                                    <span class="leading-relaxed ${isGab ? 'font-medium text-[#161615] dark:text-white' : 'text-[#5C5852] dark:text-[#A09C94]'}">
+                                                        ${exp}
+                                                    </span>
+                                                </div>
+                                            `;
+                                        }).join('')}
+                                    </div>
+                                </div>
+
+                                <!-- Personal Student Scratchpad / Anotação Pessoal -->
+                                <div class="pt-1">
+                                    <label class="block font-mono text-[10px] uppercase tracking-wider text-[#5C5852] dark:text-[#A09C94] mb-1">
+                                        Bloco de Anotações Pessoais da Questão ${String(q.id).padStart(2, '0')} (Salvo automaticamente)
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        value="${noteText.replace(/"/g, '&quot;')}" 
+                                        oninput="saveUserNote(${q.id}, this.value)"
+                                        placeholder="Escreva um lembrete, fórmula ou resumo do seu erro para revisar antes da prova..." 
+                                        class="w-full px-3 py-1.5 text-xs rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A] focus:outline-none focus:border-[#161615]"
+                                    >
+                                </div>
+                            </section>
+                        ` : ''}
+
+                    </div>
+                </article>
+                `;
+            }).join('');
+        }
+
+        // Keyboard Shortcuts for High-Craft Desktop Experience
+        function setupKeyboardShortcuts() {
+            window.addEventListener('keydown', (e) => {
+                const tag = document.activeElement?.tagName;
+                if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+                if (e.key === '/') {
+                    e.preventDefault();
+                    document.getElementById('search-input')?.focus();
+                    return;
+                }
+
+                const filtered = getFilteredQuestions();
+                if (!filtered.length) return;
+                const activeQ = filtered[focusIndex] || filtered[0];
+
+                if (viewMode === 'focus') {
+                    if (e.key === 'ArrowRight') navigateFocus(1);
+                    if (e.key === 'ArrowLeft') navigateFocus(-1);
+                }
+
+                const lower = e.key.toLowerCase();
+                if (['a', 'b', 'c', 'd', 'e'].includes(lower) && viewMode === 'focus') {
+                    const idx = ['a', 'b', 'c', 'd', 'e'].indexOf(lower);
+                    selectOption(activeQ.id, idx);
+                } else if (lower === 'h') {
+                    toggleSingleGuide(activeQ.id);
+                } else if (lower === 'm') {
+                    toggleHighlighterMode();
+                }
+            });
+        }
+
+        // TRI Diagnostic Modal
+        function openTriModal() {
+            const modal = document.getElementById('tri-modal');
+            const body = document.getElementById('tri-modal-body');
+
+            let eHit = 0, eTot = 0, mHit = 0, mTot = 0, hHit = 0, hTot = 0;
+            questionsData.forEach(q => {
+                if (q.difficulty === 'Fácil') { eTot++; if (userAnswers[q.id] === q.correctIndex) eHit++; }
+                if (q.difficulty === 'Médio') { mTot++; if (userAnswers[q.id] === q.correctIndex) mHit++; }
+                if (q.difficulty === 'Difícil') { hTot++; if (userAnswers[q.id] === q.correctIndex) hHit++; }
+            });
+
+            body.innerHTML = `
+                <p class="text-[#5C5852] dark:text-[#A09C94]">
+                    Na <strong>Teoria de Resposta ao Item (TRI)</strong> do ENEM, duas pessoas com o mesmo número bruto de acertos podem ter notas muito diferentes. O algoritmo valoriza a <strong>consistência pedagógica</strong>: acertar as questões Fáceis e Médias antes das Difíceis.
+                </p>
+                <div class="grid grid-cols-3 gap-2.5 font-mono text-center">
+                    <div class="p-3 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                        <div class="text-[10px] text-emerald-700 font-bold">FÁCEIS</div>
+                        <div class="text-base font-bold mt-0.5">${eHit}/${eTot}</div>
+                    </div>
+                    <div class="p-3 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                        <div class="text-[10px] text-amber-700 font-bold">MÉDIAS</div>
+                        <div class="text-base font-bold mt-0.5">${mHit}/${mTot}</div>
+                    </div>
+                    <div class="p-3 rounded bg-[#F7F4ED] dark:bg-[#121211] border border-[#DFD9CE] dark:border-[#2E2E2A]">
+                        <div class="text-[10px] text-[#C84B31] font-bold">DIFÍCEIS</div>
+                        <div class="text-base font-bold mt-0.5">${hHit}/${hTot}</div>
+                    </div>
+                </div>
+                <div class="p-3 rounded blueprint-note text-xs">
+                    <strong>Recomendação de Estudo:</strong> Use o filtro lateral <em>"Caderno de Erros"</em> combinado à calibragem <em>"Fácil — Base de Coerência TRI"</em> para garantir 100% de domínio nos itens de maior peso na nota.
+                </div>
+            `;
+            modal.classList.remove('hidden');
+        }
+
+        function closeTriModal() {
+            document.getElementById('tri-modal').classList.add('hidden');
+        }
+
+        // Custom Question Modal
+        function openNewQuestionModal() {
+            document.getElementById('new-question-modal').classList.remove('hidden');
+        }
+
+        function closeNewQuestionModal() {
+            document.getElementById('new-question-modal').classList.add('hidden');
+        }
+
+        function saveCustomQuestion(event) {
+            event.preventDefault();
+            const area = document.getElementById('nq-area').value;
+            const shortMap = { linguagens: 'Linguagens', humanas: 'Humanas', natureza: 'Natureza', matematica: 'Matemática' };
+            const diff = document.getElementById('nq-diff').value;
+            const topic = document.getElementById('nq-topic').value;
+            const context = document.getElementById('nq-context').value;
+            const command = document.getElementById('nq-command').value;
+            const step1 = document.getElementById('nq-step1').value;
+            const step2 = document.getElementById('nq-step2').value;
+            const step3 = document.getElementById('nq-step3').value;
+
+            const options = [
+                document.getElementById('nq-opt0').value,
+                document.getElementById('nq-opt1').value,
+                document.getElementById('nq-opt2').value,
+                document.getElementById('nq-opt3').value,
+                document.getElementById('nq-opt4').value
+            ];
+            const correctIndex = parseInt(document.getElementById('nq-correct').value, 10);
+            const exp = document.getElementById('nq-exp').value;
+            const letters = ['A', 'B', 'C', 'D', 'E'];
+
+            const newQ = {
+                id: questionsData.length + 1,
+                area,
+                areaShort: shortMap[area],
+                badge: 'Item Autoral • 2026',
+                competence: 'Matriz ENEM',
+                difficulty: diff,
+                topic,
+                context,
+                source: 'Caderno Personalizado do Estudante, 2026.',
+                command,
+                howToSolve: {
+                    commandAsk: step1,
+                    keyClues: step2,
+                    stepByStep: `Relacione a pista central (${step2}) ao comando (${step1}).`,
+                    trapAlert: step3
+                },
+                options,
+                correctIndex,
+                correctExplanation: exp,
+                optionExplanations: options.map((_, i) => i === correctIndex
+                    ? `[Gabarito Oficial] ${exp}`
+                    : `[Distrator ${letters[i]}] Alternativa incorreta diante do comando proposto. ${exp}`
+                )
+            };
+
+            questionsData.push(newQ);
+            try {
+                localStorage.setItem('caderno_enem26_custom', JSON.stringify(questionsData.slice(INITIAL_QUESTIONS.length)));
+            } catch (e) {}
+
+            document.getElementById('new-question-form').reset();
+            closeNewQuestionModal();
+            selectArea(area);
+        }
+    </script>
 </body>
 </html>
